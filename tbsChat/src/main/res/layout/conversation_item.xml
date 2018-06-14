@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/conversation_item_ll"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/ConversationItemHeight"
+                android:background="@drawable/mm_listitem_conv"
+                android:minHeight="@dimen/ConversationItemHeight"
+                android:paddingBottom="4.0dip"
+                android:paddingTop="4.0dip">
+
+    <ImageView
+        android:id="@id/avatar_iv"
+        android:layout_width="49.0dip"
+        android:layout_height="49.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8.0dip"
+        android:padding="3.0dip"
+        android:src="@drawable/mini_avatar"/>
+
+    <TextView
+        android:id="@id/tipcnt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/avatar_iv"
+        android:layout_alignTop="@id/avatar_iv"
+        android:layout_marginRight="-5.0dip"
+        android:layout_marginTop="-2.0dip"
+        android:background="@drawable/tab_unread_bg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10.0dip"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@id/avatar_prospect_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/avatar_iv"
+        android:layout_alignTop="@id/avatar_iv"
+        android:layout_marginRight="-2.0dip"
+        android:layout_marginTop="-2.0dip"
+        android:background="@drawable/friendactivity_newnotice"
+        android:gravity="center"
+        android:textSize="10.0dip"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@id/nickname_tv"
+        style="@style/MMFontTitleInList"
+        android:layout_alignTop="@id/avatar_iv"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="3.5dip"
+        android:layout_toRightOf="@id/avatar_iv"
+        android:maxWidth="140.0dip"
+        android:text="nickname"/>
+
+    <ImageView
+        android:id="@id/usericon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/nickname_tv"
+        android:layout_toRightOf="@id/nickname_tv"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@id/group_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/nickname_tv"
+        android:layout_alignTop="@id/nickname_tv"
+        android:layout_marginTop="-1.0dip"
+        android:layout_toRightOf="@id/usericon_iv"
+        android:gravity="left|center"
+        android:text="(3)"
+        android:textColor="@color/mm_list_textcolor_two"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@id/state_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/avatar_iv"
+        android:layout_alignLeft="@id/nickname_tv"
+        android:layout_alignTop="@id/last_msg_tv"
+        android:layout_below="@id/nickname_tv"
+        android:gravity="left"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@id/last_msg_tv"
+        style="@style/MMFontTipInList"
+        android:layout_width="fill_parent"
+        android:layout_alignBottom="@id/avatar_iv"
+        android:layout_marginRight="75.0dip"
+        android:layout_toRightOf="@id/state_iv"
+        android:ellipsize="end"
+        android:gravity="left|center"
+        android:text="{lastmsg}"/>
+
+    <TextView
+        android:id="@id/update_time_tv"
+        style="@style/MMFontTimeInList"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@id/group_count_tv"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/group_count_tv"
+        android:layout_marginRight="8.0dip"
+        android:gravity="right|center"
+        android:minWidth="65.0dip"
+        android:paddingRight="4.0dip"
+        android:text="{time}"
+        android:textColor="@color/mm_list_textcolor_two"/>
+
+    <ImageView
+        android:id="@id/image_input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/last_msg_tv"
+        android:layout_alignTop="@id/last_msg_tv"
+        android:layout_gravity="right|center"
+        android:layout_toLeftOf="@id/image_mute"
+        android:gravity="right"
+        android:paddingRight="2.0dip"
+        android:src="@drawable/chat_input_text_notify"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@id/image_mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/last_msg_tv"
+        android:layout_alignTop="@id/last_msg_tv"
+        android:layout_gravity="right|center"
+        android:layout_toLeftOf="@id/talkroom_iv"
+        android:gravity="right"
+        android:paddingRight="2.0dip"
+        android:src="@drawable/chat_mute_notify"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@id/talkroom_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/last_msg_tv"
+        android:layout_alignTop="@id/last_msg_tv"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@id/holder"
+        android:contentDescription="@string/app_app"
+        android:gravity="right|center"
+        android:src="@drawable/talk_room_mic_idle"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@id/holder"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/update_time_tv"
+        android:layout_marginRight="8.0dip"/>
+</RelativeLayout>

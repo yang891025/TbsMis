@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="user_sort_options">
+        <item>按A-Z顺序排列</item>
+        <item>按关注时间排序</item>
+        <item>按分组名称排序</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>名称</item>
+        <item>大小</item>
+        <item>时间</item>
+        <item>类型</item>
+    </string-array>
+    <string-array name="detailshow_options">
+        <item>显示在弹出窗口</item>
+        <item>显示在底部信息区</item>
+        <item>显示在右窗口</item>
+    </string-array>
+    <string-array name="touchmode_options">
+        <item>边界可滑</item>
+        <item>全屏可滑</item>
+    </string-array>
+    <string-array name="Button_options">
+        <item>文字显示在底部</item>
+        <item>文字显示在右边</item>
+    </string-array>
+    <string-array name="showin_options">
+        <item>本窗口</item>
+        <item>弹出窗口</item>
+        <item>其他窗口</item>
+    </string-array>
+
+</resources>

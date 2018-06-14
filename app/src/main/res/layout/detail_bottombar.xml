@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dip"
+    android:background="@drawable/controlbar_bg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/news_detail_backBtn"
+        style="@style/news_detail_button" >
+
+        <ImageView
+            android:id="@+id/news_detail_backIV"
+            style="@style/news_detail_iamge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/news_detail_goBtn"
+        style="@style/news_detail_button" >
+
+        <ImageView
+            android:id="@+id/news_detail_goIV"
+            style="@style/news_detail_iamge"
+            android:src="@drawable/bottombar_btn_ungo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/news_detail_homeBtn"
+        style="@style/news_detail_button" >
+
+        <ImageView
+            android:id="@+id/news_detail_homeIV"
+            style="@style/news_detail_iamge"
+            android:src="@drawable/bottombar_btn_refresh" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pic_share"
+        style="@style/news_detail_button" >
+
+        <ImageView
+            style="@style/news_detail_iamge"
+            android:src="@drawable/news_detail_share" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/news_detail_settingBtn"
+        style="@style/news_detail_button" >
+
+        <ImageView
+            style="@style/news_detail_iamge"
+            android:src="@drawable/bottombar_btn_setting" />
+    </LinearLayout>
+
+</LinearLayout>

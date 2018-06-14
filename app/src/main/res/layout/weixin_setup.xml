@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/setting_titlebar_advance" />
+
+    <com.tbs.tbsmis.util.NonFocusingScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/weixin_account_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_all" >
+
+                <ImageView
+                    android:id="@id/imageview"
+                    android:layout_width="55.0dip"
+                    android:layout_height="55.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8.0dip"
+                    android:padding="8.0dip"
+                    android:src="@drawable/default_avatar" />
+
+                <TextView
+                    android:id="@+id/show_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="当前公众号"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+                <ImageView
+                    style="@style/tool_imageview_basic"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/xsj"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/more_all"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <EditText
+                        android:id="@+id/weixin_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/show_home"
+                        android:ems="10"
+                        android:hint="e.tbs.com.cn"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/show_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="首页："
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <EditText
+                        android:id="@+id/token_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/show_token"
+                        android:ems="10"
+                        android:hint="e.tbs.com.cn"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/show_token"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="服务地址："
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:id="@+id/api_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <TextView
+                        android:id="@+id/api_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/show_api"
+                        android:singleLine="true"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/show_api"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="自动回复："
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:id="@+id/receive_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <TextView
+                        android:id="@+id/receive_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/show_receive"
+                        android:singleLine="true"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/show_receive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="信息接收："
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <EditText
+                        android:id="@+id/weixin_news_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/show_day"
+                        android:layout_toRightOf="@+id/show_data"
+                        android:ems="10"
+                        android:hint="3"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/show_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="信息保留："
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/show_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="天"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_all"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/weixin_show_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_all"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="设置中显示微信管理"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/weixin_show_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2.0dip"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tbs.tbsmis.util.NonFocusingScrollView>
+
+</LinearLayout>

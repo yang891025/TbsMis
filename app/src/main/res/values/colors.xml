@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="divider_color">#ffd3d3d3</color>
+    <color name="black">#ff000000</color>
+    <color name="write_color">#ff3b3b3b</color>
+    <color name="write_hint_color">#ffa5a6a8</color>
+    <color name="android_light_gray">#fff5f5f5</color>
+    <color name="backgroundcolor">#fff0f1f1</color>
+    <color name="more_color">#ff3b3b3b</color>
+    <color name="text_hint_color">#ff9c9d9d</color>
+    <color name="translucent_dark">#99000000</color>
+    <color name="menu_defoult">#2f2f2f</color>
+    <color name="menu_focus">#252525</color>
+    <color name="menu_press">#2a2a2a</color>
+    <color name="light_gray">#dddddd</color>
+    <color name="bg_gray">#f6f6f6</color>
+    <color name="title_btn_normal_color">#ff0c6ce2</color>
+    <color name="title_btn_pressed_color">#ff0059c6</color>
+
+    <color name="sapi_background_color">#fff7f7f7</color>
+    <color name="right_menu_item_text_color">#ff90959a</color>
+    <color name="biz_plugin_searchnews_text">#ff2f2f2f</color>
+    <color name="list_divider">#ffe0e0e0</color>
+    <color name="list_bg_color">#fffafafa</color>
+    <color name="title_bar_backgroud_color">#ff2786fb</color>
+    <color name="offline_line_color">#ffe2e2e2</color>
+    <color name="offline_item_label_color">#ff303030</color>
+    <color name="offline_item_state_color">#FF535353</color>
+    <color name="offline_start_color">#ff098bed</color>
+    <!-- 意见反馈style -->
+    <color name="half_transparent">#aa000000</color>
+    <color name="bright_foreground_light">#ff000000</color>
+    <color name="dim_foreground_light">#808080</color>
+    <color name="dim_checktime_light">#ff808080</color>
+    <color name="share_unbind_btn_press_color">#ffd1d3dc</color>
+    <color name="share_unbind_btn_color">#ffe8e9ef</color>
+    <!-- 文件管理 -->
+    <color name="gray">#A6A6A0</color>
+    <color name="deepcolor">#faaa5f</color>
+    <color name="shadowcolor">#333333</color>
+    <color name="border_color">#cccccc</color>
+    <color name="red">#FF0000</color>
+    <color name="orange_yellow">#9b9ba0</color>
+    <color name="default_style">#e0f6fb</color>
+    <color name="green_style">#e2eef9</color>
+    <color name="pink_style">#f2fef0</color>
+    <color name="red_style">#f4f4f4</color>
+    <color name="purple_style">#faf1e3</color>
+    <color name="blue_style">#e0f6fb</color>
+    <color name="yellow_style">#e1f3e8</color>
+
+    <color name="remote_connect_text">#FFe78018</color>
+    <color name="remote_disconnect_text">#FF901821</color>
+    <!-- 二维码扫描颜色值 -->
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

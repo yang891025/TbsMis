@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/new_help"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor" >
+
+    <RelativeLayout
+        android:id="@+id/layout_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/title_bg" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            style="@style/title_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/finish_btn"
+            android:layout_toRightOf="@+id/back_btn"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="搜索" />
+
+        <ImageView
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/menu_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_sapi_search_check"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@id/layout_search_title" >
+
+        <ImageView
+            android:id="@+id/search_submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/ic_menu_search" />
+
+        <Spinner
+            android:id="@+id/search_category_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="简单检索"/>
+
+        <EditText
+            android:id="@+id/news_search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@id/search_submit_button"
+            android:layout_toRightOf="@id/search_category_btn"
+            android:hint="请输入关键字"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingLeft="10.0dip"
+            android:singleLine="true"
+            android:textColor="@color/biz_plugin_searchnews_text"
+            android:textCursorDrawable="@null"
+            android:textSize="16.0sp" />
+
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/clear_search_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/news_search_edit"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/search_result_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            layout="@layout/loading_dialog" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/search_window"
+        android:layout_width="100.0dip"
+        android:layout_height="150.0dip"
+        android:layout_below="@+id/layout_sapi_search_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:id="@+id/search_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <WebView
+                android:id="@+id/search_history_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <include
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    layout="@layout/loading_dialog1" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+            <WebView
+                android:id="@+id/search_category_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <include
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    layout="@layout/loading_dialog2" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

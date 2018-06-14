@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar_backgroud_color" >
+
+        <ImageView
+            android:id="@+id/more_btn2"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/search" />
+
+        <ImageView
+            android:id="@+id/search_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/menu_btn"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include layout="@layout/contact_search_bar" />
+
+    <TextView
+        android:id="@id/empty_voicesearch_tip_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/android_light_gray"
+        android:gravity="center_horizontal"
+        android:paddingTop="0.0dip"
+        android:text="暂无检索结果"
+        android:textColor="@color/mm_pref_summary"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/empty_blacklist_tip_tv"
+        style="MMFontPreferenceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="#ffced2d7"
+        android:gravity="center"
+        android:textColor="@color/mm_pref_summary"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/search_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#0000"
+        android:divider="@null"
+        android:dividerHeight="5dp" />
+
+</LinearLayout>

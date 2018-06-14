@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/sapi_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_sapi_title_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/error_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="25.0dip"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sapi_error" />
+
+                <TextView
+                    android:id="@id/error_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sapi_error_text"
+                    android:textColor="@color/red"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/normal_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/smscode_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="@string/sapi_sms_sent_to"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/worklayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/done"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/sapi_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/done_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="@string/send_label"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/done_text"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-23.0dip"
+                    android:background="@drawable/loading_dialog_center" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_marginTop="30.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sapi_not_get_gateway"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="14.0sp" />
+
+                <Button
+                    android:id="@+id/resent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@drawable/sapi_btn_selector"
+                    android:gravity="center"
+                    android:text="@string/sapi_sms_resent_gateway"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

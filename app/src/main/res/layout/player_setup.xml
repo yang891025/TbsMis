@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="播放器配置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/player_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="管理中显示视频播放器"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/player_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="APP应用包："
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <EditText
+                            android:id="@+id/player_package_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="com.tbsplayer"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/is_install_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/more_all"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/is_install_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="检测是否安装应用包"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

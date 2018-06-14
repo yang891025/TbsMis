@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/include_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <include layout="@layout/setting_user_setup"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/general_setup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/include_user"
+                    android:layout_marginTop="20.0dp">
+
+                    <include layout="@layout/general_setup"/>
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/function_setup"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_below="@id/general_setup">-->
+
+                    <!--<include layout="@layout/function_setup"/>-->
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/manager_setup"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/function_setup"-->
+                <!--android:layout_marginTop="20.0dp">-->
+
+                <!--<include layout="@layout/manager_setup"/>-->
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/storage_backup_setup"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/manager_setup"-->
+                <!--android:layout_marginTop="20.0dp">-->
+
+                <!--<include layout="@layout/storage_backup_setup"/>-->
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/manager_2_setup"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/storage_backup_setup"-->
+                <!--android:layout_marginTop="20.0dp">-->
+
+                <!--<include layout="@layout/manager_2_setup"/>-->
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/function_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.0dp"
+                    android:layout_marginTop="20.0dp"
+                    android:background="@drawable/line_layut_white"
+                    android:layout_below="@id/general_setup">
+
+                    <ImageView
+                        android:id="@+id/update_apk_imageview"
+                        style="@style/tool_imageview_basic"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/title_bar_more_setting"/>
+
+                    <TextView
+                        style="@style/setting_textview"
+                        android:layout_toRightOf="@id/update_apk_imageview"
+                        android:text="模块管理"/>
+
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/function_layout"
+                    android:layout_marginTop="20.0dp">
+
+                    <include layout="@layout/about_setup"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/complete_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/manager_setup"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20.0dp"
+                    android:background="@drawable/title_quit_bar">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/quitall"
+                        android:textColor="@color/white"
+                        android:textSize="18.0sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

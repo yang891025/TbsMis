@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/User_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtUserType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/user_service"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/User_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtUserType"
+                android:layout_alignBottom="@+id/txtUserType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_style_shadow"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_user_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/review_bg_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/user_start_set"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用服务"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/user_start_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/user_task_set"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检查登录状态间隔"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/show_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:textColor="#ffa7a7a7"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/user_inactive_set"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不活动超时间隔"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/show_inactive_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:textColor="#ffa7a7a7"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/user_show_auto_set"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="启用自动登录设置"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/user_show_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/user_show_set"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="菜单头部是否出现登录信息"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/menu_show_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/task_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtTaskType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/nettask_service"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/task_show_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtTaskType"
+                android:layout_alignBottom="@+id/txtTaskType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_style_shadow"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/review_bg_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/start_task"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_status"
+                android:textColor="@color/write_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/task_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/restart_web"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_restart_web"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/restart_web_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/user_task_time"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任务调度间隔"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/show_task_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:textColor="#ffa7a7a7"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:id="@+id/user_task_startime"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任务调度时间段"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/show_task_startime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:textColor="#ffa7a7a7"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@color/light_grey" >
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0dip" android:paddingTop="13.0dip" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/contact_info_avatar_iv" android:background="@drawable/default_avatar_shadow" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginTop="2.0dip" />
+        <View android:layout_width="10.0dip" style="@style/MMSplit" />
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:ellipsize="end" android:id="@id/contact_info_nickname_tv" android:text="{username}" android:layout_width="wrap_content" android:singleLine="true" style="@style/MMFontPreferenceProfile" />
+                    <ImageView android:id="@id/contact_info_sex_iv" android:paddingLeft="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_sex_male" />
+                    <ImageView android:id="@id/contact_info_vuserinfo_iv" android:paddingLeft="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:id="@id/contact_info_username_tv" android:text="微信号:" style="@style/MMFontPreferenceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/info_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" >
+        <RelativeLayout android:id="@+id/district_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/preference_first_item" android:clickable="true" android:gravity="center_vertical" >
+            <TextView android:id="@+id/district" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:paddingBottom="8.0dip" android:paddingTop="8.0dip" android:text="地区" android:textColor="@color/mm_pref_summary" />
+            <TextView android:id="@+id/district_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/district" android:paddingBottom="8.0dip" android:paddingTop="8.0dip" android:text="任雪涛" android:textColor="@android:color/black" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/signature_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/preference_item" android:clickable="true" android:gravity="center_vertical" >
+            <TextView android:id="@+id/signature" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:paddingBottom="8.0dip" android:paddingTop="8.0dip" android:text="个性签名" android:textColor="@color/mm_pref_summary" />
+            <TextView android:id="@+id/signature_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/signature" android:paddingBottom="8.0dip" android:paddingTop="8.0dip" android:text="13488717690" android:textColor="@android:color/black" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/picture_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@drawable/preference_last_item" android:clickable="true" android:gravity="center_vertical" >
+            <TextView android:id="@+id/picture" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginLeft="3.0dip" android:paddingBottom="8.0dip" android:paddingTop="8.0dip" android:text="个人相册" android:textColor="@color/mm_pref_summary" />
+            <LinearLayout android:id="@+id/picture_value" android:layout_toLeftOf="@id/submenu_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/picture" android:paddingBottom="8.0dip" android:paddingTop="8.0dip" android:layout_gravity="left|center">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="invisible" android:src="@drawable/default_avatar_shadow"/>
+            </LinearLayout>
+            <ImageView android:layout_alignParentRight="true" android:layout_centerVertical="true" android:id="@id/submenu_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:src="@drawable/mm_submenu" />
+        </RelativeLayout>
+    </LinearLayout>
+    <Button android:id="@id/sendBtn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/info_tv" android:layout_centerHorizontal="true" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginTop="30.0dip" android:background="@drawable/btn_style_green" android:text="发消息" android:textColor="#ffffff" android:textSize="18sp" />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      发行配置
+               应用名称
+               还需修改应用图标
+    -->
+    <string name="app_name">移动信息服务</string>
+
+     <!--
+     关于显示内容
+     -->
+    <string name="about_title">TBS-MIS</string>
+    <string name="app_path">com.tbs.tbsmis</string>
+    <string name="copyright_content">北京金信桥信息技术有限公司</string>
+    <string name="technique_provide_content">http://www.tbs.com.cn</string>
+     <!--
+      更新配置
+     -->
+    <string name="UpdateUrl">http://e.tbs.com.cn:1112/update/TBSMis/update.cbs</string>
+    <string name="UpdateIniUrl">http://e.tbs.com.cn:1112/update/updateSys.cbs</string>
+    <!--
+      路径默认配置
+    -->
+    <string name="SD_CARD_TBSAPP_PATH2">TbsMis</string>
+    <!--
+      内部常量
+    -->
+    <string name="app_name_music">我的音乐</string>
+
+    <!--
+      内部服务名
+    -->
+    <string name="ServerName">com.tbs.tbsmis.TbsMisSvr</string>
+    <string name="ServerName1">com.tbs.tbsmis.TbsUserSvr</string>
+    <string name="WebServerName">com.tbs.tbsmis.PreWebSvr</string>
+    <string name="TbsWebServer">com.tbs.tbsweb.server.TBSWebSvr</string>
+    <string name="TbsHttpServer">com.tbs.tbsweb.server.HttpSvr</string>
+    <string name="TbsStarWebServer">com.tbs.tbsmis.server.TBSWebSvr</string>
+    <string name="TbsTaskServer">com.tbs.tbsmis.server.TBSTaskSvr</string>
+    <string name="DownloadServerName">com.tbs.tbsmis.TbsDownloadSVr</string>
+    <string name="SERVICE_NAME">com.tbs.tbsmis.NotificationService</string>
+    <string name="PUSH_SERVICE_NAME">com.tbs.tbsmis.notification.PushMsgService</string>
+
+
+</resources>

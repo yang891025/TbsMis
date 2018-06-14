@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="8.0dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_Name_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_name"
+            android:hint="给你添加的类别起个名字吧" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="类别名称："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_Color_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_name1"
+            android:hint="暂用0-6代替白蓝绿粉紫红黄"
+            android:inputType="number" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="背景颜色："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/account_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sapi_error" />
+
+        <TextView
+            android:id="@+id/account_error_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sapi_error_text"
+            android:textColor="@color/red"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

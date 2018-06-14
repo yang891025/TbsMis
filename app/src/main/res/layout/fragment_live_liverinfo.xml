@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              >
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/more_up">
+
+        <Button
+            android:id="@+id/subject"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_bottom_pressed"
+            android:text="关注"/>
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:src="@drawable/default_avatar"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/subject"
+            android:layout_toRightOf="@+id/userimage"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/usernickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:singleLine="true"
+                android:text="我的昵称"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="#ff303030"
+                android:textSize="15.0sp"/>
+
+            <TextView
+                android:id="@+id/room_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/usernickname"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:singleLine="true"
+                android:text="房间ID"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/title_btn_normal_color"
+                android:textSize="12.0sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/more_down">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="直播公告:"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#ff303030"
+            android:textSize="15.0sp"/>
+        <com.tbs.circle.widgets.ExpandTextView
+            android:id="@+id/contentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:showLines="2"
+            android:background="@color/sapi_background_color"
+            tools:ignore="MissingConstraints"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/more_all"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/sapi_liver_mobile_li"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip">
+
+            <TextView
+                android:id="@+id/sapi_liver_qq"
+                android:layout_width="match_parent"
+                android:layout_height="24.0dip"
+                android:layout_margin="2.dp"
+                android:layout_below="@+id/liver_qq_text"
+                android:background="@color/sapi_background_color"
+                android:singleLine="true"
+                android:textColor="#ff4b5460"
+                android:textSize="12.0sp"/>
+
+            <TextView
+                android:id="@+id/liver_qq_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ"
+                android:textColor="#ff424242"
+                android:textSize="12.0sp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="#ffe5e5e5"/>
+
+        <RelativeLayout
+            android:id="@+id/sapi_account_mobile_li"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip">
+
+            <TextView
+                android:id="@+id/sapi_account_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="24.0dip"
+                android:layout_margin="2.dp"
+                android:layout_below="@+id/my_phone"
+                android:background="@color/sapi_background_color"
+                android:singleLine="true"
+                android:textColor="#ff4b5460"
+                android:textSize="12.0sp"/>
+
+            <TextView
+                android:id="@+id/my_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系电话"
+                android:textColor="#ff424242"
+                android:textSize="12.0sp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="#ffe5e5e5"/>
+
+        <RelativeLayout
+            android:id="@+id/sapi_account_signature_li"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip">
+
+            <TextView
+                android:id="@+id/sapi_account_signature"
+                android:layout_width="match_parent"
+                android:layout_height="65.0dp"
+                android:layout_margin="2.dp"
+                android:layout_below="@+id/signature_txt"
+                android:background="@color/sapi_background_color"
+                android:gravity="top"
+                android:singleLine="true"
+                android:textColor="#ff4b5460"
+                android:textSize="16.0sp"/>
+
+            <TextView
+                android:id="@+id/signature_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="个性签名"
+                android:textColor="#ff424242"
+                android:textSize="12.0sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

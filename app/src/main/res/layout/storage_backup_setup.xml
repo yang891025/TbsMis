@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/line_layut_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/terminal_setup"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg">
+
+        <ImageView
+            android:id="@+id/terminal_setup_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/terminal_manage"/>
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/terminal_setup_imageview"
+            android:text="@string/advanced_setup"/>
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/storage_manager"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg">
+
+        <ImageView
+            android:id="@+id/storage_manager_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_advanced_setup_iv"/>
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/storage_manager_imageview"
+            android:text="存储设置"/>
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+
+</LinearLayout>

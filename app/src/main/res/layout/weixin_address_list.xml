@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".weixin.WeixinAccountActivity" >
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar_backgroud_color" >
+
+        <ImageView
+            android:id="@+id/more_btn2"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/weixin_setup" />
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:layout_width="48.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8.0dip"
+            android:background="@drawable/sapi_title_btn_selector"
+            android:textColor="@color/white"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible" >
+
+            <ProgressBar
+                android:id="@+id/title_progress"
+                style="@style/smallCustomProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/search_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_btn"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlebar_layout"
+        android:background="@color/android_light_gray"
+        android:orientation="vertical" >
+
+        <include layout="@layout/contact_search_bar" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/android_light_gray" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/android_light_gray"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/empty_voicesearch_tip_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/android_light_gray"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="0.0dip"
+                    android:textColor="@color/mm_pref_summary"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/empty_blacklist_tip_tv"
+                    style="MMFontPreferenceLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="#ffced2d7"
+                    android:gravity="center"
+                    android:textColor="@color/mm_pref_summary"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/title"
+                    android:background="@color/android_light_gray"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="30dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="10.0dip"
+                android:paddingTop="10.0dip" >
+
+                <com.tbs.tbsmis.widget.SideBar
+                    android:id="@+id/address_scrollbar"
+                    android:layout_width="30dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@drawable/scrollbar_bg_drawable" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/address_selected_contact_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mmfooter_bg_gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <HorizontalScrollView
+                android:layout_width="0.0dip"
+                android:layout_height="50.0dip"
+                android:layout_weight="1.0"
+                android:fillViewport="true"
+                android:orientation="horizontal"
+                android:padding="5.0dip"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/address_selectd_avatar_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left|center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dot_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1.0dip"
+                        android:layout_marginRight="1.0dip"
+                        android:src="@drawable/dot_avatar" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/address_select_finish_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mm_title_act_btn"
+                android:enabled="false"
+                android:minWidth="75.0dip"
+                android:text="@string/alert_yes_button"
+                android:textColor="@color/dim_checktime_light"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

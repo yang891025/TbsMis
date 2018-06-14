@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@drawable/controlbar_bg"
+    android:orientation="horizontal" >
+
+    <ViewSwitcher
+        android:id="@+id/news_detail_foot_viewswitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/news_detail_bottom_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/ibtnback"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.8"
+                android:background="@drawable/listview_item_bg_noborder"
+                android:clickable="true"
+                android:onClick="btnShowExchange_Click" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottombar_btn_setting" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.05dip"
+                android:layout_height="fill_parent"
+                android:background="@color/border_color" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5" >
+
+                <ImageButton
+                    android:id="@+id/ibtnInput"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/news_detail_input" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="50.0dip"
+                    android:text="请输入。。。"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="18.0sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/news_detail_bottom_bar"
+            android:padding="5.0dip" >
+
+            <RelativeLayout
+                android:id="@+id/commentTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:id="@+id/ibtnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/comment_close_click" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/send_comment_disable" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="请输入。。。"
+                    android:textColor="@color/black"
+                    android:textSize="18.0dp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_width="fill_parent"
+                android:layout_height="150.0dip"
+                android:layout_below="@id/commentTitle"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/comment_input_bg"
+                android:gravity="top"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/CommentSync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etComment"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/news_detail_bottom_bar"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/sync_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/basic_checkbox_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@id/sync_checkbox"
+                    android:gravity="center"
+                    android:text="@string/sync_title"
+                    android:textColor="#ff4b5460"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ViewSwitcher>
+
+</LinearLayout>

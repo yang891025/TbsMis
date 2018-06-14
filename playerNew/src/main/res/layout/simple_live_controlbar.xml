@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/ll_bottom_bar"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#aa000000"
+              android:gravity="center_vertical"
+              android:minHeight="48dp"
+              android:padding="4dp">
+
+    <!--底部控制栏-->
+    <RelativeLayout
+        android:id="@+id/control_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="35.0dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/iv_live_play"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dp"
+            android:src="@drawable/simple_player_arrow_white_24dp"/>
+
+        <ImageView
+            android:id="@+id/tv_live_shot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dp"
+            android:layout_toLeftOf="@id/app_video_fullscreen"
+            android:src="@android:drawable/ic_menu_crop"/>
+
+        <ImageView
+            android:id="@+id/tv_live_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dp"
+            android:layout_toLeftOf="@id/tv_live_shot"
+            android:src="@android:drawable/ic_menu_slideshow"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/im_danmu_control"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.0dp"
+            android:layout_toLeftOf="@id/tv_live_record"
+            android:src="@drawable/pad_play_opendanmu"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_danmu_send"
+            android:layout_width="match_parent"
+            android:layout_height="30.0dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15.0dp"
+            android:layout_marginRight="15.0dp"
+            android:layout_marginTop="7.0dip"
+            android:layout_toLeftOf="@id/im_danmu_control"
+            android:layout_toRightOf="@id/iv_live_play"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="22.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@+id/ediit_comment"
+                android:background="#23ffffff"/>
+
+            <EditText
+                android:id="@+id/ediit_comment"
+                android:layout_width="match_parent"
+                android:layout_height="30.0dip"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_btn_send"
+                android:background="#00000000"
+                android:hint="在这里输入弹幕"
+                android:imeOptions="actionSend|flagNoExtractUi"
+                android:maxLength="20"
+                android:padding="5.0dip"
+                android:textColor="#ffffffff"
+                android:textColorHint="#23ffffff"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/img_btn_send"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:padding="5.0dip"
+                android:src="@drawable/btn_live_hor_send_selector"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/app_video_fullscreen"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/simple_player_icon_fullscreen_stretch"/>
+    </RelativeLayout>
+
+</LinearLayout>

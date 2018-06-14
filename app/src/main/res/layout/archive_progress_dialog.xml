@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="14.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="14.0dip"
+            android:layout_marginTop="12.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="0.0dip"
+                android:singleLine="true"
+                android:text="请稍候..."
+                android:textColor="@color/black"
+                android:textSize="14.0dip"/>
+
+            <TextView
+                android:id="@+id/message_t"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:lineSpacingExtra="4.0dip"
+                android:padding="0.0dip"
+                android:textColor="@color/black"
+                android:textSize="14.0dip"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="从："
+                        android:textColor="@color/black"
+                        android:textSize="14.0dip"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:text="到："
+                        android:textColor="@color/black"
+                        android:textSize="14.0dip"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/from"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="14.0dip"/>
+
+                    <TextView
+                        android:id="@+id/to"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="#ff2878e6"
+                        android:textSize="14.0dip"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_progress_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginTop="12.0dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="当前进度："
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+                <TextView
+                    android:id="@+id/item_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.0dip"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="0%"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+                <TextView
+                    android:id="@+id/curr_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|right"
+                    android:ellipsize="start"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/item_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="12.0dip"
+                android:layout_marginTop="6.0dip"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/total_progress_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginTop="6.0dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="总进度"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text=" : "
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+
+                <TextView
+                    android:id="@+id/num_completed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+
+                <TextView
+                    android:id="@+id/num_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+
+                <TextView
+                    android:id="@+id/total_percent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|right"
+                    android:singleLine="true"
+                    android:text="0%"
+                    android:textColor="@color/black"
+                    android:textSize="14.0dip"/>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/total_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="12.0dip"
+                android:layout_marginTop="6.0dip"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time_remaining_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginTop="5.0dip"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/time_remaining_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已用时间:"
+                android:textColor="@color/black"
+                android:textSize="14.0dip"/>
+
+            <TextView
+                android:id="@+id/time_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0dip"/>
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14.0dip"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

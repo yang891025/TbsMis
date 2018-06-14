@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/color_show"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_margin="10.0dip"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_name_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_name"
+            android:hint="我的菜单">
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单名称："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_code_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_code"
+            android:hint="menu_my">
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单代号："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_url_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_url"
+            android:hint="http://e.tbs.cm.cn/">
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单链接："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_location_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_location"
+            android:hint="right_top"
+            android:visibility="gone">
+        </EditText>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/edit_location"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioBtnImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_button"
+                android:checked="true"
+                android:paddingLeft="28.0dip"
+                android:text="左上"
+                android:textColor="@color/offline_item_state_color" />
+
+            <RadioButton
+                android:id="@+id/radioBtnTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.0dip"
+                android:button="@drawable/check_button"
+                android:paddingLeft="28.0dip"
+                android:text="右上"
+                android:textColor="@color/offline_item_state_color" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/edit_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单位置："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip">
+
+        <SeekBar
+            android:id="@+id/SeekBar_X"
+            style="@style/MySeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8.0dip"
+            android:layout_toRightOf="@+id/show_x"
+            android:max="100"/>
+
+        <TextView
+            android:id="@+id/show_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="右边距："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip">
+
+        <SeekBar
+            android:id="@+id/SeekBar_Y"
+            style="@style/MySeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8.0dip"
+            android:layout_toRightOf="@+id/show_y"
+            android:max="100"/>
+
+        <TextView
+            android:id="@+id/show_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="上边距："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:visibility="gone">
+
+        <SeekBar
+            android:id="@+id/SeekBar_Color"
+            style="@style/MySeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8.0dip"
+            android:layout_toRightOf="@+id/show_color"
+            android:max="255"
+            android:progress="128"/>
+
+        <TextView
+            android:id="@+id/show_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="背景颜色："
+            android:textSize="18.0dip"/>
+    </RelativeLayout>
+
+    <Switch
+        android:id="@+id/menu_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="15.0dip"
+        android:text="可出现默认菜单项"
+        android:textSize="18.0dip"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.tbs.tbsmis"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21"/>
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"/>
+
+    <application
+        android:name=".app.AppContext"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name,android:theme,android:icon">
+        <activity
+            android:name=".activity.LanuchActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LanuchActivity1"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <data
+                    android:host="tbs.com"
+                    android:scheme="tbsmis"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.InitializeToolbarActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.DetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <!-- <activity -->
+        <!-- android:name="com.tbs.tbsmis.activity.SetingActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"/> -->
+        <activity
+            android:name=".activity.SlidingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ScanActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".activity.MyCloudActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+
+                <!-- 协议部分，随便设置 -->
+                <data
+                    android:host="store"
+                    android:scheme="tbsmis"/>
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MyWalletActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MyResourceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.PopMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.NetTaskActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MySkyDriveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.BrowserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.AppearanceSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.TerminalSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.FunctionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.OverviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.CommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.AboutAppActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.SetUpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.CloudSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.MyCommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.AppManagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.LogSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.OperationGuideActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.SubscribeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MySubscribeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MyCollectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SmscodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.SmsRegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.FindPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.ActivateAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.DynamicLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.PhoneRegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.EmailRegisterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.EmailCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.MyAppsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".app.NewApplication"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".source.FileSourceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".Live.LiveListMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/MainTheme"/>
+        <!-- 适配规格 -->
+        <meta-data
+            android:name="design_width"
+            android:value="1080"/>
+        <meta-data
+            android:name="design_height"
+            android:value="1920"/>
+
+        <activity
+            android:name=".activity.ResourceStoreActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".source.FileListViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".source.FileViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.OfflineActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <!-- <activity -->
+        <!-- android:name="com.tbs.tbsmis.activity.ModuleSetupActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light"/> -->
+        <activity
+            android:name=".activity.SDUnavailableActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.AppShortcutActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".update.UpdateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".update.UpdateManageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.BackgroundManageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.AppSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <!-- <activity -->
+        <!-- android:name="com.tbs.tbsmis.activity.SystemSetupActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light"/> -->
+        <activity
+            android:name=".activity.SystemIntrActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SystemSetupActivityNew"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.LoginSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.PushSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.InterfaceSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.StoreSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SourceStoreSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.TerminalAppSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SkydriveSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.OfflineSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".download.DownloadListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SubscribeSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.CollectSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.WalletSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.AideSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.ManagerSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.ModuleManagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.OtherSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.BackupSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.EmailSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SystemInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.DiskSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.PlayerSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.ReaderSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MusicSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.McsSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MsiSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.VideoPublishSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.DeviceManagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.CustomMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MenuSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".weixin.WeixinActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".weixin.WeixinSetUpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".weixin.WeixinMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MyBackupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.StorageSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.FileSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".backup.BackAppActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".backup.BackDataActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".check.LoginDialogResult"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HalfTranslucent"/>
+        <activity
+            android:name=".activity.MySetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.SearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".search.SearchActivityNew"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".search.SearchResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".search.SearchSetupActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.MyPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light"/>
+        <activity
+            android:name=".activity.DisplaySettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.HalfTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activity.FeedBack_New"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.HalfTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activity.PushMsgActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.HalfTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activity.NewSeekBarActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.HalfTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".notification.NotificationDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Notification Details"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name=".notification.NotificationSettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Notification Settings"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".notification.NotificationListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Notification Settings"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".activity.ChoseFileToSkyDriveDialog"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".activity.tbkChooseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".activity.SmbFileListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".city.SelectProvinceActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name=".city.SelectCityActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <activity
+            android:name=".video.VideoPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity
+            android:name=".Live.LivePlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity
+            android:name=".video.VideoPlayerWeb"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent"/>
+        <!-- <activity -->
+        <!-- android:name="com.tbs.tbsmis.wxapi.PayActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"/> -->
+        <activity
+            android:name="com.tbs.intstaller.BaseInstalActivity"
+            android:configChanges="screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="file"/>
+                <data android:mimeType="*/*"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.tbk"/>
+            </intent-filter>
+        </activity>
+        <!-- 音乐播放器 -->
+        <!-- <activity -->
+        <!-- android:name=".music.AudioPlayActivity" -->
+        <!-- android:configChanges="screenSize|keyboardHidden" -->
+        <!-- android:label="@string/app_name_music" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light" -->
+        <!-- android:uiOptions="splitActionBarWhenNarrow"> -->
+        <!-- <intent-filter android:label="@string/app_name_music"> -->
+        <!-- <action android:name="android.intent.action.VIEW"/> -->
+
+
+        <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+
+
+        <!-- <data android:scheme="file"/> -->
+        <!-- <data android:scheme="content"/> -->
+        <!-- <data android:mimeType="audio/mpeg"/> -->
+        <!-- <data android:mimeType="audio/x-wav"/> -->
+        <!-- <data android:mimeType="audio/mid"/> -->
+        <!-- <data android:mimeType="audio/amr"/> -->
+        <!-- <data android:mimeType="audio/ogg"/> -->
+        <!-- <data android:mimeType="audio/x-mpegurl"/> -->
+        <!-- </intent-filter> -->
+        <!-- <intent-filter -->
+        <!-- android:label="@string/app_name_music" -->
+        <!-- tools:ignore="AppLinkUrlError"> -->
+        <!-- <action android:name="android.intent.action.VIEW"/> -->
+
+
+        <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+
+
+        <!-- <data android:scheme="http"/> -->
+        <!-- <data android:scheme="https"/> -->
+        <!-- <data android:scheme="ftp"/> -->
+        <!-- <data android:scheme="sftp"/> -->
+        <!-- <data android:mimeType="audio/mpeg"/> -->
+        <!-- <data android:mimeType="audio/x-wav"/> -->
+        <!-- <data android:mimeType="audio/amr"/> -->
+        <!-- <data android:mimeType="audio/ogg"/> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name=".music.LocalMusicActivity" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:screenOrientation="portrait"/> -->
+        <!-- <activity -->
+        <!-- android:name=".music.acs.AcsAudioAcitvity" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Holo.Light"/> -->
+
+
+        <!-- <service -->
+        <!-- android:name=".music.AudioPlayService" -->
+        <!-- android:label="audioservice" -->
+        <!-- android:permission="android.permission.INTERNET"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.tbs.tbsmis.AudioPlayService"> -->
+        <!-- </action> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- 下载调用 -->
+        <activity
+            android:name="com.tbs.intstaller.SchemeDownActivity"
+            android:label="@string/app_name">
+
+            <!-- 要想在别的App上能成功调起App，必须添加intent过滤器 -->
+            <intent-filter>
+
+                <!-- 协议部分，随便设置 -->
+                <data
+                    android:host="download"
+                    android:scheme="tbsmis"/>
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <!-- 文件管理 -->
+        <activity
+            android:name=".file.FileExplorerTabActivity"
+            android:configChanges="screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+            android:theme="@style/CustomActionBarTheme">
+        </activity>
+        <activity
+            android:name=".file.FileMainAcitivty"
+            android:configChanges="screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".file.FileExplorerPreferenceActivity"
+            android:label="@string/menu_setting"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+        </activity>
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchActivity"/>
+
+        <service android:name=".file.FTPServerService"/>
+        <!-- 文件管理 ^ -->
+        <service
+            android:name=".notification.PushMsgService"
+            android:enabled="true"
+            android:label="PushMsgService">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.tbs.tbsmis.NotificationService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".update.OfflineMsgService"
+            android:enabled="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.TbsMisSVr">
+                </action>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".app.AppLoginService"
+            android:enabled="true"
+            android:label="AppLoginService"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.TbsUserSvr">
+                </action>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".app.WebService"
+            android:enabled="true"
+            android:label="WebService"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.PreWebSVr">
+                </action>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.tbs.tbsweb.server.TBSWebSvr"
+            android:enabled="true"
+            android:label="TBSWebSvr"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.server.TBSWebSvr"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.tbs.tbsweb.server.NetTaskSvr"
+            android:enabled="true"
+            android:label="TBSTaskSvr"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.server.TBSTaskSvr"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".update.TbsDownloadService"
+            android:enabled="true"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.TbsDownloadSVr">
+                </action>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".update.PlayerLogService"
+            android:enabled="true"
+            android:permission="android.permission.WRITE_EXTERNAL_STORAGE">
+            <intent-filter>
+                <action android:name="com.tbs.tbsmis.PlayerLogService">
+                </action>
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".Exam.ExamMainActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".Exam.AnalogyExaminationActivity"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Exam.MyErrorQuestionActivity"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Exam.MyErrorQuestionDetailActivity"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".weixin.WeiXinAddressActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinUserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinPicActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinSearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinNewMessage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinTemplateActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinTemplateEditActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinChatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinSendActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HalfTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinSendManager"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinSendNews"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeixinReceiveNews"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinSendedActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinNewsManager"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinHistoryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeinXinPageMessage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+        </activity>
+        <activity
+            android:name=".weixin.WeiXinNewsEdit"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="android.test.runner"
+            android:required="true"/>
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1477692153"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 填写您从Mob开发者后台中得到的Appkey和AppSecret -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="1ecf257b9ac7e"/>
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="1a47ddad50c7f7054ea6bdc40927131c"/>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name=".Live.LiveSetupActivity">
+        </activity>
+        <activity
+            android:name=".Musics.MusicPublicActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".ShortVideo.ShortVideoPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity
+            android:name=".Film.FilmActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+        </activity>
+        <activity
+            android:name=".download.DownloadActivity"
+            android:launchMode="singleTask">
+        </activity>
+    </application>
+
+</manifest>

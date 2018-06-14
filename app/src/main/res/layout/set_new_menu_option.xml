@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="8.0dip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_name_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/option_name"
+            android:hint="百度"></EditText>
+
+        <TextView
+            android:id="@+id/option_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单项名称："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_type_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/type_name"
+            android:hint="view/click/miniprogram"
+            android:visibility="gone"></EditText>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/type_name"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioBtnImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_button"
+                android:checked="true"
+                android:padding="8.0dip"
+                android:text="链接"
+                android:textColor="@color/offline_item_state_color" />
+
+            <RadioButton
+                android:id="@+id/radioBtnTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_button"
+                android:padding="8.0dip"
+                android:text="键值"
+                android:textColor="@color/offline_item_state_color" />
+
+            <RadioButton
+                android:id="@+id/radioBtnSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_button"
+                android:padding="8.0dip"
+                android:text="小程序"
+                android:textColor="@color/offline_item_state_color" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单项类型："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/key_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_key_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_name"
+            android:hint="M100"></EditText>
+
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单项键值："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/url_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edit_url_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_url"
+            android:hint="http://e.tbs.com.cn/"></EditText>
+
+        <TextView
+            android:id="@+id/edit_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="菜单项链接："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/small_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/appid_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/edit_appid_Text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/edit_appid"
+                android:hint="http://e.tbs.com.cn/"></EditText>
+
+            <TextView
+                android:id="@+id/edit_appid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="小程序ID："
+                android:textSize="18.0dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pagepath_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_pagepath_Text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/edit_pagepath"
+                android:hint="http://e.tbs.com.cn/"></EditText>
+
+            <TextView
+                android:id="@+id/edit_pagepath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="小程序路径："
+                android:textSize="18.0dip" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

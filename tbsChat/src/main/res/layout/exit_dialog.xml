@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/exit_layout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10.0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/ConfirmDialog"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="退出软件"
+                android:textColor="#333"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="退出后，你将无法转发新消息.确定要退出？"
+                android:textColor="#333"
+                android:textSize="16sp"/><!-- 退出后，你将无法转发新消\n息.确定要退出？ -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/confirm_dialog_bottom_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/exitBtn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_style_white"
+                android:onClick="exitbutton1"
+                android:text="否"
+                android:textColor="#333"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/exitBtn0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_style_green"
+                android:onClick="exitbutton0"
+                android:text="是"
+                android:textColor="#fff"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_style_one_disabled"
+                android:gravity="center"
+                android:text="0kb"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DefaultLocale" severity="ignore">
+        <ignore path="src/com/tbs/tbs_news/util/IniFileIO.java" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/drawable-hdpi/mm_listitem_pressed.9.png" />
+    </issue>
+</lint>

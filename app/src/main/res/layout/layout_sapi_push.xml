@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/feedback_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip"
+        android:paddingTop="5.0dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feedback_bg"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:text="推送信息"
+                android:textColor="@color/black"
+                android:textSize="18.0dip"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/push_radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/push_broadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:button="@drawable/check_button"
+                    android:checked="true"
+                    android:paddingLeft="20.0dip"
+                    android:text="广播"
+                    android:textColor="@color/offline_item_state_color" />
+
+                <RadioButton
+                    android:id="@+id/push_signle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:button="@drawable/check_button"
+                    android:paddingLeft="20.0dip"
+                    android:text="个人"
+                    android:textColor="@color/offline_item_state_color" />
+
+                <RadioButton
+                    android:id="@+id/push_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:button="@drawable/check_button"
+                    android:paddingLeft="20.0dip"
+                    android:text="同组"
+                    android:textColor="@color/offline_item_state_color" />
+
+                <RadioButton
+                    android:id="@+id/push_anonymous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:button="@drawable/check_button"
+                    android:paddingLeft="20.0dip"
+                    android:text="匿名"
+                    android:textColor="@color/offline_item_state_color" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/push_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:text="用户名 ："
+                    android:textColor="@color/black"
+                    android:textSize="13.0dip" />
+
+                <EditText
+                    android:id="@+id/push_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:hint="输入推送用户名"
+                    android:textSize="10.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:text="标题 ："
+                    android:textColor="@color/black"
+                    android:textSize="13.0dip" />
+
+                <EditText
+                    android:id="@+id/push_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:hint="输入推送标题"
+                    android:textSize="10.0dip" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:text="请输入你要推送的信息："
+                android:textColor="@color/black"
+                android:textSize="13.0dip" />
+
+            <EditText
+                android:id="@+id/push_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:autoLink="web|email"
+                android:gravity="top"
+                android:hint="请输入你要推送的信息"
+                android:lines="4"
+                android:textSize="13.0dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:text="链接 ："
+                    android:textColor="@color/black"
+                    android:textSize="13.0dip" />
+
+                <EditText
+                    android:id="@+id/push_link"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:hint="相关链接"
+                    android:textSize="10.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/push_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/publish_btn_selector"
+                    android:text="推送"
+                    android:textSize="18.0dip" />
+
+                <Button
+                    android:id="@+id/cancle_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/publish_btn_selector"
+                    android:text="取消"
+                    android:textSize="18.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

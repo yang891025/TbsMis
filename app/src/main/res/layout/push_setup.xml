@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/msg_push_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_all">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="信息推送"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/more_up">
+
+                    <TextView
+                        android:id="@+id/accept_net_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="接收设置"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/accept_net_title"
+                        android:text="@string/push_message"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/push_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="设置中显示信息推送"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/push_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/module_push_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/push_address"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/push_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/adress"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <EditText
+                            android:id="@+id/module_push_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/push_port"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/push_port"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/port"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <EditText
+                            android:id="@+id/module_push_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/push_path"
+                            android:background="@drawable/search_page_search_box"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/push_path"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/path"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/send_net_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="发送设置"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/send_net_title"
+                        android:text="@string/push_message"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <Button
+                        android:id="@+id/app_send_push"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/app_btn_selector"
+                        android:text="推送消息"
+                        android:textColor="@color/offline_start_color"
+                        android:textSize="12.0sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/send_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="显示推送信息按钮"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/send_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/module_send_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/address_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/address_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/adress"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/module_send_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/port_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/port_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/port"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down">
+
+                        <EditText
+                            android:id="@+id/module_send_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/path_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/path_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/path"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                tools:context=".activity.ImgDynamicActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_top_bar"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_light"
+        android:gravity="center"
+        android:text="@string/post_delete_tv_d"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/noScrollgridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include"
+        android:clipToPadding="false"
+        android:paddingLeft="20dp"
+        android:paddingRight="45dp"
+        android:paddingTop="124dp"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@null"
+        android:gravity="left|top"
+        android:paddingLeft="5dp"
+        android:hint="这一刻的想法..."
+        android:layout_below="@+id/include">
+    </EditText>
+
+</RelativeLayout>

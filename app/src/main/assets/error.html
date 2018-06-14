@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)http://w.aicai.com/cardjifenbao.do?agentId=233186 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>该页面无法访问</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport"
+          content="height=device-height,initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.box {
+	margin: 0 auto;
+	width: 304px;
+	padding-top: 25px;
+}
+
+span {
+	display: block;
+	padding-bottom: 10px;
+	border-bottom: 2px dashed #999;
+	margin-bottom: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+body {
+	font-size: 16px;
+	line-height: 24px;
+	font-family: "微软雅黑"
+}
+
+input {
+	padding: 5px;
+	color: #FFF;
+	background: url(image/botton_bg.png);
+	border-radius: 2px;
+	height: 30px;
+}
+
+.img {
+	margin: 0 auto;
+	width: 144px;
+	padding-top: 20px
+}
+
+.list {
+	margin: 0 auto;
+}
+
+form {
+	text-indent: 20%;
+	margin-top: 10px
+}
+</style>
+</head>
+<body>
+<div class=img>
+    <img src="image/error.png" />
+</div>
+<div class=box>
+
+    <div class="list">
+        <div >
+            <ul style="list-style: none">
+                <li>服务没有响应，请重启本地服务后刷新！</li>
+            </ul>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <p>
+        <span></span>
+    </p>
+    <div style="margin: 0 auto; text-align: center; margin-top: 15px">
+			<span name="agreeb"
+                  style="display: inline-block; border: none; padding: 5px; color: #FFF; background: url(image/botton_bg.png); border-radius: 2px;"
+                  onclick="doreset()">&nbsp; 设&nbsp; 置 &nbsp; </span>
+        <!--<span name="agreer"-->
+        <!--style="display: inline-block; border: none; padding: 5px; color: #FFF; background: url(image/botton_bg.png); border-radius: 2px;"-->
+        <!--onclick="doreload()">&nbsp; 刷&nbsp; 新 &nbsp; </span>-->
+    </div>
+    <p
+            style="margin: 0 auto; width: 304px; color: #f00; text-align: center; margin-top: 10px">建议检查服务状态！</p>
+
+</div>
+</body>
+<SCRIPT language=javascript>
+	function doreload() {
+		//document.agreer.disabled = true;
+		history.go(-2);
+	}
+	function doreset() {
+		//document.agreeb.disabled = true;
+		window.TBS.showLocalSettingpage();
+		history.go(-1);
+	}
+</SCRIPT>
+</html>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bg" >
+
+        <TextView
+            android:id="@+id/edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="修改应用"
+            android:textColor="@color/white"
+            android:textSize="16.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="应用配置:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1,01,001..."
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="应用名称:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_resname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1,01,001..."
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="资源代号:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_resid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1,01,001..."
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/app_btn_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#ff373737"
+            android:textSize="18.0dip" />
+
+        <Button
+            android:id="@+id/cancleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/app_btn_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#ff373737"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

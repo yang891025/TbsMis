@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/sapi_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_sapi_title_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/sapi_dynamic_login_ll_error_tips"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="100.0dip"
+                    android:layout_height="100.0dip"
+                    android:background="@drawable/ic_setting_email" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="激活邮件已发送到："
+                    android:textColor="@color/write_color"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/email_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xxx@cc.com"
+                    android:textColor="@color/title_btn_normal_color"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="方式一："
+                    android:textColor="@color/write_color"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/sapi_emailmsg"
+                    android:textColor="@color/write_color"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="方式二："
+                    android:textColor="@color/write_color"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/sapi_emailcode"
+                    android:textColor="@color/write_color"
+                    android:textSize="16.0sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/more_middle"
+                    android:gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="@string/sapi_smscode"
+                        android:textColor="@color/shadowcolor"
+                        android:textSize="16.0sp" />
+
+                    <EditText
+                        android:id="@+id/emailcode"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/sapi_smscode_tip"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/shadowcolor"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/email_send"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35.0dip"
+                    android:layout_margin="10.0dip"
+                    android:background="@drawable/sapi_btn_selector"
+                    android:gravity="center"
+                    android:text="@string/sapi_action"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sapi_emailhint"
+                    android:textColor="@color/write_hint_color"
+                    android:textSize="16.0sp" />
+
+                <Button
+                    android:id="@+id/email_resend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/sapi_btn_selector"
+                    android:gravity="center"
+                    android:text="再发一封"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

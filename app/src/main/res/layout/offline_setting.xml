@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_margin="1.0dip"
+        android:background="#fff5f5f5"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/chxSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/checkbox_selector"
+            android:button="@drawable/checkbox_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@id/chxSelectAll"
+            android:gravity="center_vertical"
+            android:text="@string/selectAllChannel"
+            android:textColor="@color/black"
+            android:textSize="17.0sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="14.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@color/offline_line_color" >
+
+        <ListView
+            android:id="@+id/listTopicItems"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0.0px"
+            android:drawSelectorOnTop="false"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="true"
+            android:listSelector="@null" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp" >
+
+        <LinearLayout
+            android:id="@+id/pushmsg_set"
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:background="@color/offline_line_color" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1.0dip"
+                android:background="@color/list_bg_color"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip" >
+
+                <TextView
+                    android:id="@+id/txtpushmsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="信息推送设置"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <CheckBox
+                    android:id="@+id/pushmsg_checkbox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignBaseline="@+id/txtpushmsg"
+                    android:layout_alignBottom="@+id/txtpushmsg"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/checkbox_style_shadow"
+                    android:clickable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pushmsg_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/review_bg_top"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/notification_enable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_up"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/notification_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="启用信息推送"
+                    android:textColor="#ff555858"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/notification_title"
+                    android:text="接受推送信息"
+                    android:textColor="#ffa7a7a7"
+                    android:textSize="13.0dip" />
+
+                <CheckBox
+                    android:id="@+id/notification_box"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/basic_checkbox_selector"
+                    android:clickable="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sound_enable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sound_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="铃声"
+                    android:textColor="#ff555858"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sound_title"
+                    android:text="推送声音提醒"
+                    android:textColor="#ffa7a7a7"
+                    android:textSize="13.0dip" />
+
+                <CheckBox
+                    android:id="@+id/sound_box"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/basic_checkbox_selector"
+                    android:clickable="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/vibrate_enable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/vibrate_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="震动"
+                    android:textColor="#ff555858"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vibrate_title"
+                    android:text="推送信息震动提醒"
+                    android:textColor="#ffa7a7a7"
+                    android:textSize="13.0dip" />
+
+                <CheckBox
+                    android:id="@+id/vibrate_box"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/basic_checkbox_selector"
+                    android:clickable="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/show_notification_enable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_down"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/show_notification_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="通知"
+                    android:textColor="#ff555858"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/show_notification_title"
+                    android:text="是否显示在通知栏"
+                    android:textColor="#ffa7a7a7"
+                    android:textSize="13.0dip" />
+
+                <CheckBox
+                    android:id="@+id/show_notification_box"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/basic_checkbox_selector"
+                    android:clickable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginTop="14.0dip"
+            android:background="@color/offline_line_color" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1.0dip"
+                android:background="@color/list_bg_color" >
+
+                <TextView
+                    android:id="@+id/txtlog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="推送信息管理"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <Button
+                    android:id="@+id/log_checkbox_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40.0dip"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="8.0dip"
+                    android:background="@drawable/app_btn_selector"
+                    android:minHeight="40.0dip"
+                    android:text="推送列表"
+                    android:textColor="@color/offline_start_color"
+                    android:textSize="12.0sp" />
+                <Button
+                    android:id="@+id/app_send_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40.0dip"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/log_checkbox_btn"
+                    android:background="@drawable/app_btn_selector"
+                    android:minHeight="40.0dip"
+                    android:text="推送消息"
+                    android:textColor="@color/offline_start_color"
+                    android:textSize="12.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

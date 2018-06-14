@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp" >
+
+        <LinearLayout
+            android:id="@+id/log_set"
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:background="@color/offline_line_color" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1.0dip"
+                android:background="@color/list_bg_color"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip" >
+
+                <TextView
+                    android:id="@+id/txtlog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="日志设置"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <CheckBox
+                    android:id="@+id/log_checkbox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignBaseline="@+id/txtlog"
+                    android:layout_alignBottom="@+id/txtlog"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/checkbox_style_shadow"
+                    android:clickable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/log_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/review_bg_top"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/log_enable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_all"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/log_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="允许记录日志"
+                    android:textColor="#ff555858"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_title"
+                    android:text="启动用户日志记录"
+                    android:textColor="#ffa7a7a7"
+                    android:textSize="13.0dip" />
+
+                <CheckBox
+                    android:id="@+id/log_box"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/basic_checkbox_selector"
+                    android:clickable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/log_log"
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginTop="14.0dip"
+            android:background="@color/offline_line_color" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1.0dip"
+                android:background="@color/list_bg_color"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip" >
+
+                <TextView
+                    android:id="@+id/logtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="日志管理"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <CheckBox
+                    android:id="@+id/showlog_checkbox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignBaseline="@+id/logtxt"
+                    android:layout_alignBottom="@+id/logtxt"
+                    android:layout_alignParentRight="true"
+                    android:button="@drawable/checkbox_style_shadow"
+                    android:clickable="false" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_logcat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <WebView
+            android:id="@+id/log_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <include
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                layout="@layout/loading_dialog" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

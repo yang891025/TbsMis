@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/search_ll"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/search_bar_edit_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="4.0dip"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/search_bar_et"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:drawableLeft="@drawable/search_bar_icon_normal"
+            android:hint="@string/contact_search_hint"
+            android:imeActionLabel="搜索"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="@dimen/BasicTextSize" />
+
+        <ImageButton
+            android:id="@+id/search_clear_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="5.0dip"
+            android:src="@drawable/search_clear"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/myview"
+        android:layout_width="30.0dip"
+        android:layout_height="0.0dip"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/search_more_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/search_bar_btn_click"
+        android:text="@string/contact_search_tip"
+        android:textColor="#20000000"
+        android:textSize="14.0dip"
+        android:visibility="gone" />
+
+</LinearLayout>

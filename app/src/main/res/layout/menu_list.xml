@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_up"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="16.0dip"
+                android:layout_weight="0.0"
+                android:text="@string/text_page_font"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <Button
+                android:id="@+id/text_smaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_weight="0.0"
+                android:background="@drawable/text_smaller_selector" />
+
+            <Button
+                android:id="@+id/text_bigger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="14.0dip"
+                android:layout_weight="0.0"
+                android:background="@drawable/text_bigger_selector" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/titletool"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_middle"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/title"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/title_check_box"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/detailtool"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_middle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/detailtool"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/detail_check_box"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/detailcomment"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_middle"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/comment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/detailcomment"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/comment_check_box"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14.0dip"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favourite"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_middle"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/favourite3"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14.0dip"
+                android:background="@drawable/xsj" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/share"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_middle"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/more_share"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14.0dip"
+                android:background="@drawable/xsj" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_more"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/more_down"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/more_set"
+                android:textColor="#ff303030"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14.0dip"
+                android:background="@drawable/xsj" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

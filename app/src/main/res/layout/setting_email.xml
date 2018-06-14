@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/No_web_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtNo_webType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="无Web服务"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/No_web_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtNo_webType"
+                android:layout_alignBottom="@+id/txtNo_webType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/No_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtNoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/no_server"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/No_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtNoType"
+                android:layout_alignBottom="@+id/txtNoType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/review_bg_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/no_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_status"
+                android:textColor="@color/write_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/no_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="match_parent"
+                android:button="@drawable/arrow_up_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/no_server_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:id="@+id/remotevisit_no"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:id="@+id/checkIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remotevisit_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/remotevisit_no_CheckBox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:id="@+id/dirbrowser_no"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dirbrowser_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/dirbrowser_no_CheckBox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adress"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/local_no_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/local_adress"
+                android:imeOptions="actionNext"
+                android:inputType="textPhonetic"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/port1"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/local_no_port"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/local_port"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15.0dp"
+            android:paddingRight="15.0dp" >
+
+            <Button
+                android:id="@+id/no_TbsWebStart"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyStarted"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/no_TbsWebDown"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyDown"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/no_TbsWebCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyCheck"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/no_TbsWebRestart"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyRestart"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Local_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtLocalType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/local_server"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/Local_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtLocalType"
+                android:layout_alignBottom="@+id/txtLocalType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/review_bg_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/web_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_status"
+                android:textColor="@color/write_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/status_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="match_parent"
+                android:button="@drawable/arrow_up_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/web_server_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:id="@+id/restart_web"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timer_restart_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/restart_web_CheckBox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:id="@+id/remotevisit_web"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remotevisit_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/remotevisit_web_CheckBox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:id="@+id/dirbrowser_web"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dirbrowser_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/dirbrowser_web_CheckBox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adress"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/local_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/local_adress"
+                android:imeOptions="actionNext"
+                android:inputType="textPhonetic"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/port1"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/local_port"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/local_port"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10.0dp" >
+
+            <Button
+                android:id="@+id/TbsWebStart"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyStarted"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/TbsWebDown"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyStop"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/TbsWebCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyCheck"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/TbsWebRestart"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyRestart"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Http_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtHttpType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/http_service"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/Http_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtHttpType"
+                android:layout_alignBottom="@+id/txtHttpType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_http"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/review_bg_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/http_svr"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/http_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_status"
+                android:textColor="@color/write_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:layout_width="28.0dip"
+                android:layout_height="match_parent"
+                android:button="@drawable/arrow_up_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:id="@+id/restart_http"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timer_restart_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/restart_http_CheckBox"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remotevisit_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/light_gray"
+                android:contentDescription="@string/hint_adress" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="5.0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dirbrowser_web"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:button="@drawable/checkbox_selector"
+                    android:clickable="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adress"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/local_http_Address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/local_adress"
+                android:imeOptions="actionNext"
+                android:inputType="textPhonetic"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/port1"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/local_http_port"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/local_port"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10.0dp" >
+
+            <Button
+                android:id="@+id/TbsHttpStart"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyStarted"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/TbsHttpDown"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyStop"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/TbsHttpCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyCheck"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/TbsHttpRestart"
+                android:layout_width="wrap_content"
+                android:layout_height="45.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:text="@string/onKeyRestart"
+                android:textColor="@color/offline_start_color"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Other_TypeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="14.0dip"
+        android:background="@color/offline_line_color" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44.0dip"
+            android:layout_margin="1.0dip"
+            android:background="@color/list_bg_color"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip" >
+
+            <TextView
+                android:id="@+id/txtOtherType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/other_server"
+                android:textColor="@color/offline_item_label_color"
+                android:textSize="16.0sp" />
+
+            <CheckBox
+                android:id="@+id/Other_CheckBox"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignBaseline="@+id/txtOtherType"
+                android:layout_alignBottom="@+id/txtOtherType"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/checkbox_selector"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/review_bg_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adress"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/hint_adress"
+                android:imeOptions="actionNext"
+                android:inputType="textPhonetic"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="5.0dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/port"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtPWD"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_page_search_box"
+                android:hint="@string/hint_port"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingLeft="5.0dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray"
+            android:contentDescription="@string/hint_adress" />
+    </LinearLayout>
+
+</LinearLayout>

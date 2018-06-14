@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/controll_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerInParent="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/download_controll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/download_button"/>
+
+        <com.tbs.tbsmis.download.CircleProgressView
+            android:id="@+id/circleProgressbar"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@id/controll_layout" >
+
+        <TextView
+            android:id="@+id/media_size"
+            android:textColor="@color/black"
+            android:layout_margin="16.0dip"
+            android:textStyle="normal|bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/media_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="16.0dip"
+            android:text="▷"
+            android:textSize="16dp"
+            android:textStyle="normal|bold"/>
+        <TextView
+            android:id="@+id/name"
+            android:textColor="@color/black"
+            android:layout_margin="16.0dip"
+            android:textStyle="normal|bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/media_size"
+            android:layout_toRightOf="@id/media_checked"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

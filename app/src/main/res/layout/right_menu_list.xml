@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/line_layut_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layoutUserInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/right_menu_list_mode_selector" >
+
+        <ImageView
+            android:id="@+id/loginpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/search_button" />
+
+        <TextView
+            android:id="@+id/more_title"
+            style="@style/tool_date_text"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/loginpage"
+            android:layout_toLeftOf="@+id/setupInfo"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:id="@+id/setupInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setup_btn" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5.0dip"
+            android:progressDrawable="@drawable/progress_style"
+            android:visibility="invisible" />
+
+        <WebView
+            android:id="@+id/webview_right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_gray"
+            android:scrollbars="vertical" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <include
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                layout="@layout/loading_dialog2" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--
+     	<com.tbs.tbs_news.util.NonFocusingScrollView
+        style="@style/setting_scrollview">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/light_gray" />
+        <RelativeLayout
+            android:id="@+id/layoutUserMsg"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgUserMsg"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/right_navigation_list" />
+
+            <TextView
+                android:id="@+id/textUserMsg"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgUserMsg"
+                android:text="@string/usermsg" />
+
+            <ImageView
+                android:id="@+id/tool_arrows8"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutMyCollect"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgMyCollect"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/right_navigation_collect" />
+
+            <TextView
+                android:id="@+id/tool_textview_update"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgMyCollect"
+                android:text="@string/favourite2" />
+
+            <ImageView
+                android:id="@+id/tool_arrows1"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutOffline"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgOffline"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/right_navigation_download" />
+
+            <TextView
+                android:id="@+id/txtOffline"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgOffline"
+                android:text="@string/dataDownload" />
+
+            <ImageView
+                android:id="@+id/tool_arrows4"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutPushMessage"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgPushMessage"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/right_navigation_push" />
+
+            <TextView
+                android:id="@+id/txtPushMessage"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgPushMessage"
+                android:text="@string/data_manager" />
+
+            <ImageView
+                android:id="@+id/tool_arrows2"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutAppManager"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgAppManager"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/right_navigation_app" />
+
+            <TextView
+                android:id="@+id/txtNightMode"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgAppManager"
+                android:text="@string/app_manager" />
+
+            <ImageView
+                android:id="@+id/tool_arrows3"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutClearTemp"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgclearTemp"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/settings_empty_cache_ico" />
+
+            <TextView
+                android:id="@+id/textclearTemp"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgclearTemp"
+                android:text="@string/cleartemp" />
+
+            <ImageView
+                android:id="@+id/tool_arrows7"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+    <RelativeLayout
+        android:id="@+id/layoutFeedback"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/setting_button_bg" >
+
+        <ImageView
+            android:id="@+id/imgFeedback"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/right_navigation_feedback" />
+
+        <TextView
+            android:id="@+id/txtFeedback"
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/imgFeedback"
+            android:text="@string/feedback" />
+
+        <ImageView
+            android:id="@+id/tool_arrows5"
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj" />
+    </RelativeLayout>
+            <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/light_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutSetting"
+            style="@style/tool_relativelayout"
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_button_bg" >
+
+            <ImageView
+                android:id="@+id/imgSetting"
+                style="@style/tool_imageview_basic"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/right_navigation_setting" />
+
+            <TextView
+                android:id="@+id/txtSetting"
+                style="@style/setting_textview"
+                android:layout_toRightOf="@id/imgSetting"
+                android:text="@string/setup" />
+
+            <ImageView
+                android:id="@+id/tool_arrows6"
+                style="@style/tool_imageview_basic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/xsj" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_gray" />
+        </LinearLayout>
+        </com.tbs.tbs_news.util.NonFocusingScrollView>
+    -->
+
+</LinearLayout>

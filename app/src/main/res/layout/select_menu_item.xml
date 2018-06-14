@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_all">
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.00"
+        android:gravity="center_vertical"
+        android:textColor="@color/offline_item_label_color"
+        android:textSize="10.0sp"/>
+
+    <TextView
+        android:id="@+id/menu_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_title"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.00"
+        android:gravity="center_vertical"
+        android:textColor="@color/offline_item_label_color"
+        android:textSize="8.0sp"/>
+    <ImageView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ck_checked"
+        android:visibility="gone"/>
+    <!-- 这里是当该图片被选上的时候打上小勾的,因此起初是隐藏不显示的 -->
+</RelativeLayout>

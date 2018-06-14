@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="网络配置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_up"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/adress"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/software_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/server_port"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/software_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/task_setup"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_all"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="任务管理"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="清理缓存"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/clear_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_all"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="设置中显示清理缓存"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/clear_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="版本更新"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/update_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="44.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="版本上传"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <ImageView
+                            style="@style/tool_imageview_basic"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/xsj"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/update_manage"
+                        android:layout_width="match_parent"
+                        android:layout_height="44.0dip"
+                        android:background="@drawable/more_middle"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="版本管理"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <ImageView
+                            style="@style/tool_imageview_basic"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/xsj"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/update_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="设置中显示版本更新"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/update_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上传路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/update_up_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="管理路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/update_manage_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下载路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/update_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/feedback_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="意见反馈"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/feedback_manage"
+                        android:layout_width="match_parent"
+                        android:layout_height="40.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="反馈管理"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <ImageView
+                            style="@style/tool_imageview_basic"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/xsj"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/feedback_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="设置中显示意见反馈"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/feedback_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的反馈路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/feedback_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="反馈管理路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/feedback_manage_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/about_app_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="关于应用"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/about_app_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="40.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/system_msg"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <ImageView
+                            style="@style/tool_imageview_basic"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/xsj"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/aboutapp_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="关于中显示关于应用"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/aboutapp_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/aboutapp_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/introduction_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="系统帮助"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/introduction_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="关于中显示系统帮助"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/introduction_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/introduction_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/operationGuide_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="14.0dp"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="操作指南"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/operationGuide_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="关于中显示操作指南"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/operationGuide_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/operationGuide_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="5.0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="8.0dip"
+        android:shrinkColumns="1"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6.0dip"
+                android:gravity="right"
+                android:text="@string/network_domain"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="16.0dip" />
+
+            <EditText
+                android:id="@+id/network_domain"
+                style="@style/editInputText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:hint="@string/network_domain_hint_text"
+                android:scrollHorizontally="true"
+                android:textColor="@color/bright_foreground_light" />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip" >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="6.0dip"
+                android:gravity="right"
+                android:text="@string/location_server"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="16.0dip" />
+
+            <EditText
+                android:id="@+id/location"
+                style="@style/editInputText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:hint="@string/network_location_hint_text"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="14.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip" >
+
+            <TextView
+                android:layout_marginRight="6.0dip"
+                android:gravity="right"
+                android:text="@string/network_location_example"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:text="@string/network_location_example_text"
+                android:textColor="@color/bright_foreground_light"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip" >
+
+            <TextView
+                android:layout_marginRight="6.0dip"
+                android:gravity="right"
+                android:text="@string/input_username"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="16.0dip" />
+
+            <EditText
+                android:id="@+id/label_username"
+                style="@style/editInputText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="14.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip" >
+
+            <TextView
+                android:layout_marginRight="6.0dip"
+                android:gravity="right"
+                android:text="@string/input_password"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="16.0dip" />
+
+            <EditText
+                android:id="@+id/label_password"
+                style="@style/editInputText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:inputType="textPassword"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="14.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="2.0dip"
+            android:paddingTop="2.0dip" >
+
+            <TextView />
+
+            <CheckBox
+                style="@style/check_box_style"
+                android:layout_width="wrap_content"
+                android:layout_height="24.0dip"
+                android:text="@string/input_anonymous"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="14.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:paddingBottom="4.0dip"
+            android:paddingTop="4.0dip" >
+
+            <TextView
+                android:layout_marginRight="6.0dip"
+                android:gravity="right"
+                android:text="@string/network_location_display"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="16.0dip" />
+
+            <EditText
+                android:id="@+id/display"
+                style="@style/editInputText"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:hint="@string/network_location_display_hint_text"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/bright_foreground_light"
+                android:textSize="14.0dip" />
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

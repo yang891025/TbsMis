@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_divider"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/icon_head_bg"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80.0dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_history_watch"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/share_unbind_btn_selector">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dp"
+                android:src="@drawable/new_history_image"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7.0dp"
+                android:text="观看历史"
+                android:textColor="#444444"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15.0dp"
+            android:layout_marginTop="15.0dp"
+            android:background="#dfdfdf"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_letters"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/share_unbind_btn_selector">
+
+            <ImageView
+                android:id="@+id/iv_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dp"
+                android:src="@drawable/more_message"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_icon1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7.0dp"
+                android:text="消息"
+                android:textColor="#444444"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_my_video"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:layout_marginTop="8.0dp"
+        android:background="@drawable/share_unbind_btn_selector"
+        android:clickable="true"
+        >
+
+        <ImageView
+            android:id="@+id/iv_my_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9.0dp"
+            android:src="@drawable/icon_my_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9.0dp"
+            android:layout_toRightOf="@id/iv_my_video"
+            android:text="我的视频"
+            android:textColor="#444444"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9.0dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="9.0dp"
+        android:layout_marginRight="9.0dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_video_collection"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:background="@drawable/share_unbind_btn_selector"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_video_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9.0dp"
+            android:src="@drawable/icon_video_collection"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9.0dp"
+            android:layout_toRightOf="@id/iv_video_collection"
+            android:text="我的收藏"
+            android:textColor="#444444"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9.0dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+
+</LinearLayout>

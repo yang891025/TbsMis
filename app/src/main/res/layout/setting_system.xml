@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/line_layut_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/system_set"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg" >
+
+        <ImageView
+            android:id="@+id/system_set_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/system_setup" />
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/system_set_imageview"
+            android:text="@string/system_set" />
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/app_about"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg" >
+
+        <ImageView
+            android:id="@+id/app_about_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_about_iv" />
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/app_about_imageview"
+            android:text="@string/app_about" />
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/system_introducte"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg" >
+
+        <ImageView
+            android:id="@+id/system_introducte_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/settings_full_screen_ico" />
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/system_introducte_imageview"
+            android:text="系统帮助" />
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/new_help"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg" >
+
+        <ImageView
+            android:id="@+id/new_help_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_about_help" />
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/new_help_imageview"
+            android:text="操作指南" />
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj" />
+    </RelativeLayout>
+
+</LinearLayout>

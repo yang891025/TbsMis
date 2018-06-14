@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 22
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:cardview-v7:25.3.0'
+    api 'com.malinskiy:superrecyclerview:1.1.4'
+    api 'com.mikhaellopez:circularprogressbar:1.1.1'
+    implementation 'com.lzy.widget:ninegridview:0.2.1'
+    api 'com.lzy.widget:imagepicker:0.3.2'
+    //api 'com.lzy.net:okgo:3.0.4'
+    implementation 'cjt.library.wheel:camera:1.1.9'
+    implementation 'top.zibin:Luban:1.1.3'
+    //debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    //api project(':playerNew')
+    api 'org.jsoup:jsoup:1.10.3'
+    api project(':tbsChat')
+    api project(':Music')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+}

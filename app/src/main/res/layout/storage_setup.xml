@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/red_style"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg">
+
+        <ImageView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2.0dp"
+            android:src="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="存储设置"
+            android:textColor="@color/white"
+            android:textSize="18.0dp"/>
+
+        <ImageView
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu_btn"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="存储设备设置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/old_device"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/phone_storage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/storage_introduce"
+                        android:layout_margin="5dp"
+                        android:background="@color/blue_style">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="31dp"
+                            android:src="@android:drawable/ic_menu_save"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5.0dip"
+                                android:text="手机内存"
+                                android:textColor="@color/offline_start_color"
+                                android:textSize="18.0sp"/>
+
+                            <TextView
+                                android:id="@+id/phone_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="手机内置存储空间"
+                                android:textColor="@color/offline_start_color"
+                                android:textSize="10.0sp"/>
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/phone_check_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:button="@drawable/check_button"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sd_storage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phone_storage"
+                        android:layout_margin="5dp"
+                        android:background="@color/purple_style">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/microsd_warn"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5.0dip"
+                                android:text="SD卡"
+                                android:textColor="@color/offline_start_color"
+                                android:textSize="18.0sp"/>
+
+                            <TextView
+                                android:id="@+id/sd_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="外置SD卡存储空间"
+                                android:textColor="@color/offline_start_color"
+                                android:textSize="10.0sp"/>
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/sd_check_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:button="@drawable/check_button"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/otg_storage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sd_storage"
+                        android:layout_margin="5dp"
+                        android:background="@color/orange_yellow">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:src="@android:drawable/ic_menu_upload"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5.0dip"
+                                android:text="OTG存储"
+                                android:textColor="@color/offline_start_color"
+                                android:textSize="18.0sp"/>
+
+                            <TextView
+                                android:id="@+id/otg_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="外置OTG存储空间"
+                                android:textColor="@color/offline_start_color"
+                                android:textSize="10.0sp"/>
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/otg_check_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:button="@drawable/check_button"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="根路径设置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <TextView
+                        android:id="@+id/old_root"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/root_path_enable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_all"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/root_set_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="根路径"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <TextView
+                            android:id="@+id/root_set_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/root_set_title"
+                            android:text=""
+                            android:textColor="#ffa7a7a7"
+                            android:textSize="13.0dip"/>
+
+                        <ImageView
+                            style="@style/tool_imageview_basic"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/xsj"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="工作目录操作"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/copy_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="44.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="复制工作目录到新设备或者新的根路径"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/move_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="44.0dip"
+                        android:background="@drawable/more_down"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="移动工作目录到新设备或者新的根路径"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_weight="2"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <Button
+                        android:id="@+id/save_changed_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1"
+                        android:background="#ffb70000"
+                        android:text="保存并返回"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0sp"/>
+
+                    <Button
+                        android:id="@+id/reduce_changed_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:layout_weight="1"
+                        android:background="@color/title_btn_normal_color"
+                        android:text="不保存返回"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

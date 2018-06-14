@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.tbs.circle"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppCircleTheme"
+        tools:replace="android:theme">
+        >
+        <activity
+            android:name=".activity.CircleActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen">
+        </activity>
+        <activity
+            android:name=".activity.CircleDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen">
+            >
+        </activity>
+        <activity
+            android:name=".activity.CircleMeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name=".activity.ImgDynamicActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name=".activity.VideoDynamicActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name=".activity.TakePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen">
+        </activity>
+        <activity
+            android:name=".activity.CircleWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen">
+        </activity>
+        <activity
+            android:name=".activity.ShareUrlActivity"
+            android:label="@string/share_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.tbs.circle.MyGlideModule"
+            android:value="GlideModule"/>
+
+        <activity android:name=".activity.SoundRecordActivity">
+        </activity>
+
+        <service android:name=".record.RecordingService"/>
+
+        <activity android:name=".activity.SoundDynamicActivity"
+                  android:theme="@style/ImagePickerThemeFullScreen"/>
+    </application>
+
+</manifest>

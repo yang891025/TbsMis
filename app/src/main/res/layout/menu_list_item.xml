@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="#ffe6e6e6"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/app_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/android_light_gray"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/update_more"
+            android:layout_toRightOf="@+id/img_app_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="测试"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/black"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/update_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.0dip" />
+
+        <ImageView
+            android:id="@+id/img_app_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/format_picture"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/updateLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/app_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="5.0dip"
+                android:singleLine="true"
+                android:text="5.0M"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/black"
+                android:textSize="11.0sp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/update_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/setdefault"
+                    android:layout_width="65.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:gravity="center"
+                    android:minHeight="30.0dip"
+                    android:text="@string/defaultapp"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip" />
+
+                <Button
+                    android:id="@+id/setdeskshort"
+                    android:layout_width="40.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:minHeight="30.0dip"
+                    android:text="@string/setdeskshort"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip" />
+
+                <Button
+                    android:id="@+id/setdelete"
+                    android:layout_width="40.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:minHeight="30.0dip"
+                    android:text="@string/deleteapp"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/setcopy"
+                    android:layout_width="80.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:focusable="false"
+                    android:minHeight="30.0dip"
+                    android:text="@string/setcopy"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip" />
+
+                <Button
+                    android:id="@+id/setedit"
+                    android:layout_width="70.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:focusable="false"
+                    android:minHeight="30.0dip"
+                    android:text="@string/setchange"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

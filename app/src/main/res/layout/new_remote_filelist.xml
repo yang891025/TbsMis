@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/new_help"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor" >
+
+    <include
+        android:id="@+id/include_help"
+        android:layout_alignParentTop="true"
+        layout="@layout/setting_titlebar_advance" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_help"
+        android:background="@color/offline_line_color" >
+
+        <ListView
+            android:id="@+id/file_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1.0dip"
+            android:background="#ffe6e6e6"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0.0px"
+            android:drawSelectorOnTop="false"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="true"
+            android:listSelector="@null" />
+    </FrameLayout>
+
+</RelativeLayout>

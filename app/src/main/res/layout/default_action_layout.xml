@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray" >
+    <!--
+      id gv_all
+ 	宽高都是填充父窗体
+ 	numcolums 为3
+ 	水平控件的距离 10px
+ 	垂直距离是10px
+ 	gridview 离底部58px
+ 	离顶部28px
+ 	离左边5px
+ 	离右边5px
+    -->
+
+    <com.tbs.tbsmis.headergridview.stickygridheaders.StickyGridHeadersGridView
+        android:id="@+id/gv_all"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/white"
+        android:horizontalSpacing="3.0dip"
+        android:numColumns="3"
+        android:verticalSpacing="3.0dip">
+    </com.tbs.tbsmis.headergridview.stickygridheaders.StickyGridHeadersGridView>
+
+</RelativeLayout>

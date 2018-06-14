@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="配置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_up"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5.0dip"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/adress"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/ebs_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="5.0dp"
+                            android:maxLines="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/server_port"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/ebs_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingLeft="5.0dp"
+                            android:maxLines="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/ebs_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingLeft="5.0dp"
+                            android:maxLines="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="14.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/user_service"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/user_start_set"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启用服务"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <CheckBox
+                            android:id="@+id/user_start_CheckBox"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/user_task_set"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp"
+                        android:background="@drawable/more_middle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="检查登录状态间隔"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <TextView
+                            android:id="@+id/show_time"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dip"
+                            android:layout_marginRight="20dip"
+                            android:textColor="#ffa7a7a7"
+                            android:textSize="14.0dip"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/user_inactive_set"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp"
+                        android:background="@drawable/more_middle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="不活动超时间隔"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <TextView
+                            android:id="@+id/show_inactive_time"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dip"
+                            android:layout_marginRight="20dip"
+                            android:textColor="#ffa7a7a7"
+                            android:textSize="14.0dip"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/user_show_auto_set"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp"
+                        android:background="@drawable/more_middle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="启用自动登录设置"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <ImageView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"/>
+
+                        <CheckBox
+                            android:id="@+id/user_show_CheckBox"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:button="@drawable/checkbox_selector"
+                            android:clickable="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/user_show_set"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp"
+                        android:background="@drawable/more_down">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="菜单头部是否出现登录信息"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+
+                        <ImageView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"/>
+
+                        <CheckBox
+                            android:id="@+id/menu_show_CheckBox"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:button="@drawable/checkbox_selector"
+                            android:clickable="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

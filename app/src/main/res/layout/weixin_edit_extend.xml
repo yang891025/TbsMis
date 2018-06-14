@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/edit_extend"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/news_author_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="作者"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp"/>
+
+        <EditText
+            android:id="@+id/news_author"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/author_delete"
+            android:layout_toRightOf="@+id/text_author"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/shadowcolor"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="14.0sp"/>
+
+        <ImageView
+            android:id="@+id/author_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:src="@android:drawable/presence_busy"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_address_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="区域"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp"/>
+
+        <EditText
+            android:id="@+id/news_address"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/address_delete"
+            android:layout_toRightOf="@+id/text_address"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/shadowcolor"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="14.0sp"/>
+
+        <ImageView
+            android:id="@+id/address_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:src="@android:drawable/presence_busy"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_source_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="来源"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp"/>
+
+        <EditText
+            android:id="@+id/news_source"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/source_delete"
+            android:layout_toRightOf="@+id/text_source"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/shadowcolor"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="14.0sp"/>
+
+        <ImageView
+            android:id="@+id/source_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:src="@android:drawable/presence_busy"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_classifi_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_classifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="类别"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp"/>
+
+        <EditText
+            android:id="@+id/news_classifi"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/classifi_delete"
+            android:layout_toRightOf="@+id/text_classifi"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/shadowcolor"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="14.0sp"/>
+
+        <ImageView
+            android:id="@+id/classifi_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:src="@android:drawable/presence_busy"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_pic_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/text_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="图片"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp"/>
+
+        <ImageView
+            android:id="@+id/img_pic"
+            android:layout_width="45.0dip"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toRightOf="@+id/text_pic"/>
+
+        <TextView
+            android:id="@+id/news_pic"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toLeftOf="@+id/pic_delete"
+            android:layout_toRightOf="@+id/img_pic"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/shadowcolor"
+            android:textSize="14.0sp"/>
+
+        <ImageView
+            android:id="@+id/pic_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_sort_by_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/news_describe_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="描述"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp"/>
+
+        <EditText
+            android:id="@+id/news_describe"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/describe_delete"
+            android:layout_toRightOf="@+id/text_describe"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:textColor="@color/shadowcolor"
+            android:textSize="14.0sp"/>
+
+        <ImageView
+            android:id="@+id/describe_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:src="@android:drawable/presence_busy"/>
+    </RelativeLayout>
+
+</LinearLayout>

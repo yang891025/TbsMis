@@ -1,0 +1,2884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/setting_titlebar_advance" />
+
+    <com.tbs.tbsmis.util.NonFocusingScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/main_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtmain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setmain"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/main_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtmain"
+                        android:layout_alignBottom="@+id/txtmain"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/maintitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="标题栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/title_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/title_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mainleftBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/main_left_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="左按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/main_left_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_left_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/main_left_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_left_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/main_left_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/main_left_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/main_left_btn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toLeftOf="@+id/left_btn_url"
+                            android:layout_toRightOf="@+id/left_btn_name"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义动作"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_btn_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接"
+                            android:textSize="18.0dip"/>
+
+                        <ImageView
+                            android:id="@+id/left_btn_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/main_left_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/main_left_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/main_left_pic"/>
+
+                        <TextView
+                            android:id="@+id/main_left_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标"
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mainrightBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/main_right_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="右按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/main_right_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_right_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/main_right_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_right_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/main_right_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/main_right_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/main_right_btn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toLeftOf="@+id/right_btn_url"
+                            android:layout_toRightOf="@+id/right_btn_name"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义动作"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_btn_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip"/>
+
+                        <ImageView
+                            android:id="@+id/right_btn_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/main_right_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/main_right_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/main_right_pic"/>
+
+                        <TextView
+                            android:id="@+id/main_right_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/touchmode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mode_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="左右滑动模式"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/mode_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mode_title"
+                        android:text="边界可滑"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle">
+
+                    <EditText
+                        android:id="@+id/main_menu_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="8.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_toLeftOf="@+id/menu_select_btn"
+                        android:layout_toRightOf="@+id/main_menu_name"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/main_menu_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Menu菜单"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <ImageView
+                        android:id="@+id/menu_select_btn"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/button_menu"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down">
+
+                    <EditText
+                        android:id="@+id/main_load_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8.0dip"
+                        android:layout_toRightOf="@+id/main_load_name"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/main_load_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="链接 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/left_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setleft"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/left_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtleft"
+                        android:layout_alignBottom="@+id/txtleft"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/left_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/left"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/left_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/setwidthleft"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/left_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/left_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/left_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lefttitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lefttitle_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="标题栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/lefttitle_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lefttitle_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/lefttitle_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_title_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/left_title_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/left_title_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down">
+
+                        <EditText
+                            android:id="@+id/left_title_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/edit_name"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改标题显示名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/edit_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/leftleftBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/left_left_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="左按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/left_left_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/left_left_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/left_left_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_left_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/left_left_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/left_left_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/left_left_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toLeftOf="@+id/left_left_select_url"
+                            android:layout_toRightOf="@+id/left_left_txt"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_left_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip"/>
+
+                        <ImageView
+                            android:id="@+id/left_left_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/left_left_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/left_left_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/left_left_pic"/>
+
+                        <TextView
+                            android:id="@+id/left_left_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/leftrightBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/left_right_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="右按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/left_right_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/left_right_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/left_right_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_right_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/left_right_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/left_right_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle">
+
+                        <EditText
+                            android:id="@+id/left_right_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toLeftOf="@+id/left_right_select_url"
+                            android:layout_toRightOf="@+id/left_right_txt"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_right_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip"/>
+
+                        <ImageView
+                            android:id="@+id/left_right_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/left_right_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/left_right_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/left_right_pic"
+                            android:button="@drawable/basic_checkbox_selector"/>
+
+                        <TextView
+                            android:id="@+id/left_right_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/leftwidth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/leftwidth_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="宽度"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/leftwidth_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/leftwidth_title"
+                        android:text="为屏幕宽度的50%"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down">
+
+                    <EditText
+                        android:id="@+id/left_default_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/left_default_txt"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/left_default_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="链接 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/right_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setright"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/right_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtright"
+                        android:layout_alignBottom="@+id/txtright"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/right_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/right_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/setwidthright"
+                        android:textColor="#ff555858"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@+id/right_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/right_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="12.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/right_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/righttitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/righttitle_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="标题栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/righttitle_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/righttitle_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/righttitle_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_title_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/right_title_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/right_title_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down" >
+
+                        <EditText
+                            android:id="@+id/right_title_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/right_title_edit_name"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改标题显示名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_title_edit_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rightleftBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/right_left_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="左按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/right_left_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/right_left_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/right_left_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_left_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/right_left_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/right_left_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/right_left_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/right_left_txt"
+                            android:layout_toLeftOf="@+id/right_left_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_left_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/right_left_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/right_left_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/right_left_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/right_left_pic"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:id="@+id/right_left_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rightrightBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/right_right_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="右按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/right_right_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/right_right_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/right_right_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_right_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/right_right_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/right_right_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/right_right_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/right_right_txt"
+                            android:layout_toLeftOf="@+id/right_right_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_right_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/right_right_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/right_right_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/right_right_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/button_pic"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:id="@+id/button_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rightwidth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/rightwidth_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="宽度"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/rightwidth_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rightwidth_title"
+                        android:text="为屏幕宽度的50%"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down" >
+
+                    <EditText
+                        android:id="@+id/right_default_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/edit_name1"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/edit_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="链接 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomtool_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtbottomtool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setbottomtool"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/bottomtool_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtbottomtool"
+                        android:layout_alignBottom="@+id/txtbottomtool"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomtool_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/maintool"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/maintool_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="底部工具栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/maintool_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/maintool_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/maintool_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/buttonshow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/buttonshow_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="按钮名称显示位置"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/buttonshow_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buttonshow_title"
+                        android:text="名称显示在底部"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/NavigationBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/navigation_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="左①按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/navigation_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/navigation_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/left_one_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_one_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/left_one_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/left_one_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/left_one_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/left_one_txt"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改按钮名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_one_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/left_one_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/left_one_url_name"
+                            android:layout_toLeftOf="@+id/left_one_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_one_url_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/left_one_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/left_one_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/left_one_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/button_one_pic"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:id="@+id/button_one_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/BOT1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/BOT1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="左②按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/BOT1_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/BOT1_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/left_two_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_two_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/left_two_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/left_two_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/left_two_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/left_two_txtview"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改按钮名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_two_txtview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/left_two_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/left_two_text"
+                            android:layout_toLeftOf="@+id/left_two_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/left_two_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/left_two_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/left_two_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/left_two_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/button_two_pic"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:id="@+id/button_two_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/BOT2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/BOT2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="中间按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/BOT2_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/BOT2_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/middle_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/middle_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/middle_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/middle_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/middle_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/middle_name_textview"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改按钮名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/middle_name_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/middle_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/middle_url_textview"
+                            android:layout_toLeftOf="@+id/middle_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/middle_url_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/middle_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/middle_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/middle_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/button_middle_pic"
+                            android:background="@drawable/tabs_home" />
+
+                        <TextView
+                            android:id="@+id/button_middle_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/BOT3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/BOT3_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="右②按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/BOT3_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/BOT3_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/right_two_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_two_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/right_two_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/right_two_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/right_two_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/right_two_name_textview"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改按钮名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_two_name_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/right_two_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/right_two_url_textview"
+                            android:layout_toLeftOf="@+id/right_two_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_two_url_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/right_two_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/right_two_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/right_two_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/button_right_two_pic"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:id="@+id/button_right_two_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/MoreBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/more_btn_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="右①按钮"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/more_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/more_btn_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/right_one_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_one_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/right_one_open"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="启用"
+                            android:textSize="18.0dip" />
+
+                        <CheckBox
+                            android:id="@+id/right_one_open_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/right_one_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/right_one_name_textview"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="更改按钮名称"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_one_name_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="名称 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/right_one_url"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/right_one_url_textview"
+                            android:layout_toLeftOf="@+id/right_one_select_url"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="根据配置用户自定义"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/right_one_url_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="链接 "
+                            android:textSize="18.0dip" />
+                        <ImageView
+                            android:id="@+id/right_one_select_url"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/button_menu"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/right_one_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/right_one_imageview"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:layout_toRightOf="@+id/right_one_url_pic"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:id="@+id/right_one_url_pic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="图标 "
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottommsg_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtbottommsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setbottommsg"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/bottommsg_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtbottommsg"
+                        android:layout_alignBottom="@+id/txtbottommsg"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottommsg_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/mainmsg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/mainmsg_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="状态行"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/mainmsg_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mainmsg_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/mainmsg_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prompt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/prompt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="底窗口"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/prompt_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/prompt_title"
+                        android:text="@string/on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/prompt_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mainmsgwidth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/mainmsgwidth_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="底窗口高度"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/mainmsgwidth_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mainmsgwidth_title"
+                        android:text="为屏幕高度的50%"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle" >
+
+                    <EditText
+                        android:id="@+id/mainmsg_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8.0dip"
+                        android:layout_toRightOf="@+id/mainmsg_name_textview"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/mainmsg_name_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="标题 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down" >
+
+                    <EditText
+                        android:id="@+id/mainmsg_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8.0dip"
+                        android:layout_toRightOf="@+id/mainmsg_url_textview"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/mainmsg_url_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="链接 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtdetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/setdetail"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/detail_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtdetail"
+                        android:layout_alignBottom="@+id/txtdetail"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="弹出窗口标题栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/detail_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_title"
+                        android:text="@string/app_on"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/detail_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/detail_open_in_browse"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detail_open_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="是否允许在浏览器中打开"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/detail_open_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detail_open_title"
+                        android:text="允许出现"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/detail_open_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/detailshow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailshow_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="细览内容显示位置"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/detailshow_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detailshow_title"
+                        android:text="显示在细览页面"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/showin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/showin_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="细览内链接打开位置"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <TextView
+                        android:id="@+id/showin_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/showin_title"
+                        android:text="在本窗口"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle">
+
+                    <EditText
+                        android:id="@+id/popBtn_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8.0dip"
+                        android:layout_toLeftOf="@+id/popBtn_select_url"
+                        android:layout_toRightOf="@+id/popBtn_url_textview"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/popBtn_url_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="POP菜单 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <ImageView
+                        android:id="@+id/popBtn_select_url"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/button_menu"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down">
+
+                    <EditText
+                        android:id="@+id/menuBtn_url"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8.0dip"
+                        android:layout_toLeftOf="@+id/menuBtn_select_url"
+                        android:layout_toRightOf="@+id/menuBtn_url_textview"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="根据配置用户自定义"
+                        android:imeOptions="actionDone"
+                        android:inputType="textUri"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/menuBtn_url_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="MENU菜单 "
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <ImageView
+                        android:id="@+id/menuBtn_select_url"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/button_menu"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tbs.tbsmis.util.NonFocusingScrollView>
+
+</LinearLayout>

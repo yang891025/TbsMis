@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/voice_rcd_hint_rcding" android:gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/voice_rcd_hint_anim_area" android:gravity="bottom|center" android:orientation="horizontal" android:background="@drawable/voice_rcd_hint_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="160.0dip">
+            <ImageView android:id="@id/imageView1" android:layout_width="80.0dip" android:layout_height="120.0dip" android:src="@drawable/voice_rcd_hint" />
+            <ImageView android:id="@id/voice_rcd_hint_anim" android:background="@drawable/amp1" android:layout_width="80.0dip" android:layout_height="120.0dip" android:layout_toRightOf="@id/imageView1" android:layout_alignBottom="@id/imageView1" />
+            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:gravity="center" android:layout_width="160.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:text="@string/chatfooter_cancel_rcd" android:layout_below="@id/imageView1" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/voice_rcd_hint_cancel_icon_small" android:background="@drawable/voice_rcd_cancel_bg" android:padding="7.0dip" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/rcd_cancel_icon" />
+        <RelativeLayout android:id="@id/voice_rcd_hint_cancel_area" android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/voice_rcd_hint_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="160.0dip">
+            <ImageView android:id="@id/voice_rcd_hint_cancel_icon" android:layout_width="160.0dip" android:layout_height="120.0dip" android:src="@drawable/rcd_cancel_icon" />
+            <TextView android:textSize="15.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/voice_rcd_hint_cancel_text" android:background="@drawable/rcd_cancel_bg" android:layout_width="160.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:text="@string/chatfooter_cancel_rcd_release" android:layout_below="@id/voice_rcd_hint_cancel_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <LinearLayout android:id="@id/voice_rcd_hint_loading" android:gravity="center" android:orientation="horizontal" android:background="@drawable/voice_rcd_hint_bg" android:visibility="gone" android:layout_width="140.0dip" android:layout_height="140.0dip">
+        <ProgressBar android:id="@id/progressBar1" android:layout_gravity="center" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_centerInParent="true" style="@style/largeCustomProgressBar" /><!-- largeCustomProgressBar -->
+    </LinearLayout>
+    <LinearLayout android:id="@id/voice_rcd_hint_tooshort" android:gravity="center" android:orientation="vertical" android:background="@drawable/voice_rcd_hint_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="160.0dip" android:layout_height="120.0dip" android:src="@drawable/voice_to_short" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/white" android:gravity="center" android:layout_width="160.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:text="@string/chatfooter_too_short" />
+    </LinearLayout>
+</LinearLayout>

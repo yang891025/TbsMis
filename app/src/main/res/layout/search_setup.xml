@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/app_setup"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundcolor">
+
+    <include
+        android:id="@+id/include_setup"
+        layout="@layout/setting_titlebar_advance"
+        android:layout_alignParentTop="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include_setup"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/more_up"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="检索配置"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_down"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_up">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <ImageView
+                        style="@style/tool_imageview_basic"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/xsj"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/search_show_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="菜单中显示检索"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/search_show_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2.0dip"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:background="@drawable/more_middle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/search_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingLeft="5.0dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:background="@drawable/more_down"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/search_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="5.0dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_interface"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:background="@color/offline_line_color"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:id="@+id/txtmain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索界面"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <CheckBox
+                        android:id="@+id/search_interface_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtmain"
+                        android:layout_alignBottom="@+id/txtmain"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_interface_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/search_interface_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索选项标题栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/search_interface_category_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2.0dip"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/search_interface_history"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索词标题栏"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/search_interface_history_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2.0dip"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/search_interface_auto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="历史、关键字窗口"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <CheckBox
+                        android:id="@+id/search_interface_auto_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="2.0dip"
+                        android:button="@drawable/basic_checkbox_selector"
+                        android:clickable="false"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="窗口高度"
+                            android:textColor="#ff4b5460"
+                            android:textSize="16.0sp"/>
+
+                        <TextView
+                            android:id="@+id/show_window_hight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="大小"
+                            android:textColor="@color/title_btn_normal_color"
+                            android:textSize="12.0sp"/>
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/option_window_hight"
+                        style="@style/MySeekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:max="100"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="窗口宽度"
+                            android:textColor="#ff4b5460"
+                            android:textSize="16.0sp"/>
+
+                        <TextView
+                            android:id="@+id/show_window_width"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="大小"
+                            android:textColor="@color/title_btn_normal_color"
+                            android:textSize="12.0sp"/>
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/option_window_width"
+                        style="@style/MySeekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:max="100"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上边界"
+                            android:textColor="#ff4b5460"
+                            android:textSize="16.0sp"/>
+
+                        <TextView
+                            android:id="@+id/show_window_border"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="大小"
+                            android:textColor="@color/title_btn_normal_color"
+                            android:textSize="12.0sp"/>
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/option_window_border"
+                        style="@style/MySeekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:max="100"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_option"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:id="@+id/search_option_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索选项"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <CheckBox
+                        android:id="@+id/search_option_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/search_option_txt"
+                        android:layout_alignBottom="@+id/search_option_txt"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_option_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="添加检索选项"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip"/>
+
+                    <ImageView
+                        android:id="@+id/add_search_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/wheel_val"/>
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14.0dip"
+                    android:background="@drawable/more_down">
+
+                    <ListView
+                        android:id="@+id/search_option_Items"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffe6e6e6"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0.0px"
+                        android:drawSelectorOnTop="false"
+                        android:fadeScrollbars="true"
+                        android:fadingEdge="none"
+                        android:headerDividersEnabled="true"
+                        android:listSelector="@null"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/window_option"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:id="@+id/window_option_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索词管理"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <CheckBox
+                        android:id="@+id/window_option_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/window_option_txt"
+                        android:layout_alignBottom="@+id/window_option_txt"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/window_option_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/android_light_gray"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/search_personal_keyword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/app_btn_selector"
+                        android:minHeight="30.0dip"
+                        android:text="个人检索词"
+                        android:textColor="@color/black"
+                        android:textSize="12.0dip"/>
+
+                    <Button
+                        android:id="@+id/search_common_keyword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/app_btn_selector"
+                        android:minHeight="30.0dip"
+                        android:text="公共检索词"
+                        android:textColor="@color/black"
+                        android:textSize="12.0dip"/>
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/search_keyword_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200.0dip"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/window_option1"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:id="@+id/window_option1_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="检索历史管理"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                    <CheckBox
+                        android:id="@+id/window_option1_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/window_option1_txt"
+                        android:layout_alignBottom="@+id/window_option1_txt"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/window_option1_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/android_light_gray"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/search_personal_keyword1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/app_btn_selector"
+                        android:minHeight="30.0dip"
+                        android:text="个人检索词"
+                        android:textColor="@color/black"
+                        android:textSize="12.0dip"/>
+
+                    <Button
+                        android:id="@+id/search_common_keyword1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/app_btn_selector"
+                        android:minHeight="30.0dip"
+                        android:text="公共检索词"
+                        android:textColor="@color/black"
+                        android:textSize="12.0dip"/>
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/search_keyword_webview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200.0dip"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

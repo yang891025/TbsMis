@@ -1,0 +1,92 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* build.gragle
+* proguard-project.txt
+* tbsmis.iml
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* asmack\ => app\src\main\java\
+* asmack\org\jivesoftware\smack\debugger\package.html => app\src\main\resources\org\jivesoftware\smack\debugger\package.html
+* asmack\org\jivesoftware\smack\filter\package.html => app\src\main\resources\org\jivesoftware\smack\filter\package.html
+* asmack\org\jivesoftware\smack\package.html => app\src\main\resources\org\jivesoftware\smack\package.html
+* asmack\org\jivesoftware\smack\packet\package.html => app\src\main\resources\org\jivesoftware\smack\packet\package.html
+* asmack\org\jivesoftware\smack\provider\package.html => app\src\main\resources\org\jivesoftware\smack\provider\package.html
+* asmack\org\jivesoftware\smack\sasl\package.html => app\src\main\resources\org\jivesoftware\smack\sasl\package.html
+* asmack\org\jivesoftware\smack\util\package.html => app\src\main\resources\org\jivesoftware\smack\util\package.html
+* asmack\org\xbill\DNS\spi\services\sun.net.spi.nameservice.NameServiceDescriptor => app\src\main\resources\org\xbill\DNS\spi\services\sun.net.spi.nameservice.NameServiceDescriptor
+* asmack\org\xbill\DNS\windows\DNSServer.properties => app\src\main\resources\org\xbill\DNS\windows\DNSServer.properties
+* asmack\org\xbill\DNS\windows\DNSServer_de.properties => app\src\main\resources\org\xbill\DNS\windows\DNSServer_de.properties
+* asmack\org\xbill\DNS\windows\DNSServer_fr.properties => app\src\main\resources\org\xbill\DNS\windows\DNSServer_fr.properties
+* asmack\org\xbill\DNS\windows\DNSServer_pl.properties => app\src\main\resources\org\xbill\DNS\windows\DNSServer_pl.properties
+* assets\ => app\src\main\assets\
+* libs\aclibico-2.1.jar => app\libs\aclibico-2.1.jar
+* libs\alipaySdk-20160516.jar => app\libs\alipaySdk-20160516.jar
+* libs\android-support-v13.jar => app\libs\android-support-v13.jar
+* libs\armeabi\libCBScript70.so => app\src\main\jniLibs\armeabi\libCBScript70.so
+* libs\armeabi\libCBSInterpret.so => app\src\main\jniLibs\armeabi\libCBSInterpret.so
+* libs\armeabi\libcrypttools.so => app\src\main\jniLibs\armeabi\libcrypttools.so
+* libs\armeabi\libEBSClient24.so => app\src\main\jniLibs\armeabi\libEBSClient24.so
+* libs\armeabi\libEBSServer.so => app\src\main\jniLibs\armeabi\libEBSServer.so
+* libs\armeabi\libFTClient32.so => app\src\main\jniLibs\armeabi\libFTClient32.so
+* libs\armeabi\libFTSServer.so => app\src\main\jniLibs\armeabi\libFTSServer.so
+* libs\armeabi\libgnustl_shared.so => app\src\main\jniLibs\armeabi\libgnustl_shared.so
+* libs\armeabi\libhttpsvr.so => app\src\main\jniLibs\armeabi\libhttpsvr.so
+* libs\armeabi\libiconv.so => app\src\main\jniLibs\armeabi\libiconv.so
+* libs\armeabi\libIPTools.so => app\src\main\jniLibs\armeabi\libIPTools.so
+* libs\armeabi\libLawImport.so => app\src\main\jniLibs\armeabi\libLawImport.so
+* libs\armeabi\liblighttpd.so => app\src\main\jniLibs\armeabi\liblighttpd.so
+* libs\armeabi\libLoadHtml.so => app\src\main\jniLibs\armeabi\libLoadHtml.so
+* libs\armeabi\libnettask.so => app\src\main\jniLibs\armeabi\libnettask.so
+* libs\armeabi\libnettools.so => app\src\main\jniLibs\armeabi\libnettools.so
+* libs\armeabi\libNewsTools.so => app\src\main\jniLibs\armeabi\libNewsTools.so
+* libs\armeabi\libTBSBase.so => app\src\main\jniLibs\armeabi\libTBSBase.so
+* libs\armeabi\libTBSDBMan.so => app\src\main\jniLibs\armeabi\libTBSDBMan.so
+* libs\armeabi\libTBSLib.so => app\src\main\jniLibs\armeabi\libTBSLib.so
+* libs\armeabi\libTBSPDFOE.so => app\src\main\jniLibs\armeabi\libTBSPDFOE.so
+* libs\armeabi\libTBSServer.so => app\src\main\jniLibs\armeabi\libTBSServer.so
+* libs\armeabi\libTBSTrans.so => app\src\main\jniLibs\armeabi\libTBSTrans.so
+* libs\armeabi\libTBSWebSvr.so => app\src\main\jniLibs\armeabi\libTBSWebSvr.so
+* libs\armeabi\libTbszlibDll.so => app\src\main\jniLibs\armeabi\libTbszlibDll.so
+* libs\armeabi\libTimeConfig.so => app\src\main\jniLibs\armeabi\libTimeConfig.so
+* libs\armeabi\libWordSegment.so => app\src\main\jniLibs\armeabi\libWordSegment.so
+* libs\armeabi\libximage.so => app\src\main\jniLibs\armeabi\libximage.so
+* libs\armeabi\libYJJClassifyProc.so => app\src\main\jniLibs\armeabi\libYJJClassifyProc.so
+* libs\commons-httpclient-3.1.jar => app\libs\commons-httpclient-3.1.jar
+* libs\contentextractor-1.0.jar => app\libs\contentextractor-1.0.jar
+* libs\core-2.3.0.jar => app\libs\core-2.3.0.jar
+* libs\fts3.2.1.jar => app\libs\fts3.2.1.jar
+* libs\jcifs-1.1.11.jar => app\libs\jcifs-1.1.11.jar
+* libs\jsoup-1.8.3.jar => app\libs\jsoup-1.8.3.jar
+* libs\jxqlib-1.1.jar => app\libs\jxqlib-1.1.jar
+* libs\libammsdk.jar => app\libs\libammsdk.jar
+* libs\w.song.android.widget-1.0.4.jar => app\libs\w.song.android.widget-1.0.4.jar
+* lint.xml => app\lint.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

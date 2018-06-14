@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/nav_title" android:background="@drawable/mmtitle_bg_png" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/title_btn4" android:visibility="gone" android:background="@drawable/mm_title_btn_left" android:focusable="true" style="@style/MMTitleButton" />
+    <TextView android:id="@id/title" android:textSize="19.0dip" android:textColor="#ffffffff" android:ellipsize="end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/app_name" android:singleLine="true" android:shadowColor="#ff404040" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.0" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:visibility="visible" style="@style/MMTitleButton">
+        <ProgressBar android:id="@id/title_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/smallCustomProgressBar" />
+        <Button android:id="@id/title_btn1" android:visibility="gone" android:background="@drawable/mm_title_act_btn" android:textColor="@color/next_btn" android:focusable="true" style="@style/MMTitleButton" />
+    </LinearLayout>
+</LinearLayout>

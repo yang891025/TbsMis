@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg">
+
+        <ImageView
+            android:id="@+id/more_btn2"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/search_btn2"
+            android:layout_toRightOf="@+id/more_btn2"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/weixin_setup"/>
+
+        <ImageView
+            android:id="@+id/search_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/more_btn2"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/more_btn2"
+            android:background="@drawable/menu_btn"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/main_div_line"
+        android:layout_below="@id/titlebar_layout"
+        android:background="@color/bg_gray"
+        android:scrollbars="vertical"/>
+
+    <View
+        android:id="@+id/main_div_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.000005dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dip"
+        android:background="@color/border_color"/>
+
+    <RelativeLayout
+        android:id="@+id/include"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/include_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/detail_bottombar3"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/listview_item_bg_noborder"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="btnShowExchange_Click"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ep_tab_his_normal"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.05dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/border_color"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_custommenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <include
+            layout="@layout/loading_dialog2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

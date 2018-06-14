@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        minSdkVersion 16
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.android.support:appcompat-v7:25.3.0'
+    //compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0'
+    api 'com.github.bumptech.glide:glide:3.8.0'
+    androidTestImplementation 'junit:junit:4.12'
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.16'
+    //implementation 'com.github.ctiao:ndkbitmap-armv7a:0.9.16'
+    api project(':ijkplayer-java')
+}

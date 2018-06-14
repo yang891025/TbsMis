@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/line_layut_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/weixin_manager"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg">
+
+        <ImageView
+            android:id="@+id/weixin_manager_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/weixin_manage"/>
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/weixin_manager_imageview"
+            android:text="@string/weixin_setup"/>
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/module_msi"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg">
+
+        <ImageView
+            android:id="@+id/module_msi_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/mis_setup"/>
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/module_msi_imageview"
+            android:text="@string/chat_setup"/>
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/email_manager"
+        style="@style/tool_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/set_page_bg">
+
+        <ImageView
+            android:id="@+id/email_manager_imageview"
+            style="@style/tool_imageview_basic"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/email_setup"/>
+
+        <TextView
+            style="@style/setting_textview"
+            android:layout_toRightOf="@id/email_manager_imageview"
+            android:text="邮箱管理"/>
+
+        <ImageView
+            style="@style/tool_imageview_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/xsj"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75.0dip"
+    android:background="@drawable/more_middle" >
+
+    <CheckBox
+        android:id="@+id/news_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:button="@drawable/check_button"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/news_check" >
+
+        <TextView
+            android:id="@+id/alpha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#333333"
+            android:paddingLeft="10dip"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/new_pic"
+            android:layout_width="55.0dip"
+            android:layout_height="55.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_toLeftOf="@+id/new_pic"
+            android:text="标题"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textSize="16.0dip" />
+
+        <TextView
+            android:id="@+id/news_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/news_title"
+            android:layout_below="@+id/news_title"
+            android:layout_marginTop="5.0dip"
+            android:text="内容"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/light_gray"
+            android:textSize="12.0dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

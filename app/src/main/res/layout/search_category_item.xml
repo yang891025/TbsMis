@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="#ffe6e6e6"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/search_category_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@color/android_light_gray" >
+
+        <TextView
+            android:id="@+id/search_category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="测试"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="18.0dip" />
+
+        <ImageView
+            android:id="@+id/search_category_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/update_line" />
+
+        <LinearLayout
+            android:id="@+id/search_category"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_middle">
+
+                <TextView
+                    android:id="@+id/search_category_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.0dip"
+                    android:text="检索名称："
+                    android:textColor="@color/dim_checktime_light"/>
+
+                <TextView
+                    android:id="@+id/search_path_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/search_category_show"
+                    android:text="暂无"
+                    android:textColor="@color/dim_checktime_light"
+                    android:textSize="12.0dip"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:background="@drawable/more_middle">
+
+                <TextView
+                    android:id="@+id/search_category_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="检索链接："
+                    android:textColor="@color/dim_checktime_light"/>
+
+                <TextView
+                    android:id="@+id/search_path_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/search_category_url"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="暂无"
+                    android:textColor="@color/dim_checktime_light"
+                    android:textSize="12.0dip"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/search_history_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.0dip"
+                    android:maxLines="1"
+                    android:text="历史链接："
+                    android:textColor="@color/dim_checktime_light"/>
+
+                <TextView
+                    android:id="@+id/history_path_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/search_history_url"
+                    android:text="暂无"
+                    android:textColor="@color/dim_checktime_light"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:background="@drawable/more_middle">
+
+                <TextView
+                    android:id="@+id/search_key_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="关键词链接："
+                    android:textColor="@color/dim_checktime_light"/>
+
+                <TextView
+                    android:id="@+id/keyword_path_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/search_key_url"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="暂无"
+                    android:textColor="@color/dim_checktime_light"
+                    android:textSize="12.0dip"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/search_interface"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.0dip"
+                    android:text="检索接口："
+                    android:textColor="@color/dim_checktime_light"/>
+
+                <TextView
+                    android:id="@+id/search_action_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/search_interface"
+                    android:maxLines="1"
+                    android:text="暂无"
+                    android:textColor="@color/dim_checktime_light"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/update_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.0dip"
+                    android:text="关键词接口："
+                    android:textColor="@color/dim_checktime_light"/>
+
+                <TextView
+                    android:id="@+id/keyword_action_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/update_text"
+                    android:text="暂无"
+                    android:textColor="@color/dim_checktime_light"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/update_line"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/search_category_up"
+                    android:layout_width="65.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:gravity="center"
+                    android:minHeight="30.0dip"
+                    android:text="@string/up"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip"/>
+
+                <Button
+                    android:id="@+id/search_category_deleBtn"
+                    android:layout_width="40.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:minHeight="30.0dip"
+                    android:text="@string/delete"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip"/>
+
+                <Button
+                    android:id="@+id/search_category_down"
+                    android:layout_width="40.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:minHeight="30.0dip"
+                    android:text="@string/down"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/search_category_copy"
+                    android:layout_width="80.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:focusable="false"
+                    android:minHeight="30.0dip"
+                    android:text="@string/copy"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip"/>
+
+                <Button
+                    android:id="@+id/search_category_editBtn"
+                    android:layout_width="70.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/app_btn_selector"
+                    android:focusable="false"
+                    android:minHeight="30.0dip"
+                    android:text="@string/sapi_edit"
+                    android:textColor="@color/black"
+                    android:textSize="12.0dip"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

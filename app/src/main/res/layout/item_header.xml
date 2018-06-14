@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/title_basic"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="top"
+    android:background="@drawable/title_bg" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/NavigateBack"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/menu_fold" />
+
+        <ImageView
+            android:id="@+id/NavigateHome"
+            style="@style/title_more_btn"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/normal_btn" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/favourite"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/NavigateBack"
+            android:layout_toLeftOf="@+id/NavigateHome"
+            android:maxLines="1"/>
+    </RelativeLayout>
+
+</RelativeLayout>

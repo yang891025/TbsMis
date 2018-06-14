@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="云盘配置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/skyDrive_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40.0dip"
+                        android:background="@drawable/more_up"
+                        android:layout_marginTop="5.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="我的云盘"
+                            android:textColor="@color/offline_item_label_color"
+                            android:textSize="16.0sp"/>
+                        <ImageView
+                            style="@style/tool_imageview_basic"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/xsj"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/skydrive_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/more_middle"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="菜单中显示我的云盘"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/skydrive_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/skydrive_2_show_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="菜单中显示云盘管理"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip"/>
+
+                        <CheckBox
+                            android:id="@+id/skydrive_2_show_box"
+                            android:layout_width="28.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="2.0dip"
+                            android:button="@drawable/basic_checkbox_selector"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/adress"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/skydrive_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="5.0dp"
+                            android:maxLines="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_middle"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/server_port"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/skydrive_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingLeft="5.0dp"
+                            android:maxLines="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dp"
+                        android:background="@drawable/more_down"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10.0dp"
+                        android:paddingRight="5.0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="路径："
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/skydrive_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="/path"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingLeft="5.0dp"
+                            android:maxLines="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

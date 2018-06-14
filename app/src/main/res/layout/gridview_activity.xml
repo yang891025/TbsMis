@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg">
+
+        <ImageView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2.0dp"
+            android:src="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/edit_btn"
+            android:layout_toRightOf="@+id/more_btn"
+            android:gravity="center"
+            android:text="网络设置"
+            android:textColor="@color/white"
+            android:textSize="18.0dp"/>
+
+        <ImageView
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_bar_plus_selector"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/edit_btn"
+            android:layout_toStartOf="@+id/edit_btn"
+            android:layout_marginRight="9dp"
+            android:layout_marginEnd="9dp"/>
+
+        <Button
+            android:id="@+id/edit_btn"
+            android:layout_width="48.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sapi_title_btn_selector"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:textSize="12.0sp"/>
+
+
+    </RelativeLayout>
+    <!--
+      id gv_all
+ 	宽高都是填充父窗体
+ 	numcolums 为3
+ 	水平控件的距离 10px
+ 	垂直距离是10px
+ 	gridview 离底部58px
+ 	离顶部28px
+ 	离左边5px
+ 	离右边5px  
+    -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:id="@+id/gv_all"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/include_top"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/white"
+        android:horizontalSpacing="3.0dip"
+        android:numColumns="3"
+        android:verticalSpacing="3.0dip">
+    </com.handmark.pulltorefresh.library.PullToRefreshGridView>
+
+</RelativeLayout>

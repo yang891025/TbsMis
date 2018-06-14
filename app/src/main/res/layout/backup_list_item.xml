@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffe6e6e6"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/app_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/android_light_gray"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="服务器"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:layout_marginTop="1.0dip"
+        android:background="@color/list_bg_color"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip" >
+
+        <RadioGroup
+            android:id="@+id/backup_option_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/backup_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@drawable/check_button"
+                android:checked="true"
+                android:paddingLeft="28.0dip"
+                android:text="公共目录"
+                android:textColor="@color/offline_item_state_color" />
+
+            <RadioButton
+                android:id="@+id/backup_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.0dip"
+                android:layout_weight="1.0"
+                android:button="@drawable/check_button"
+                android:paddingLeft="28.0dip"
+                android:text="私人目录"
+                android:textColor="@color/offline_item_state_color" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/android_light_gray"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="备份选项"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:layout_marginTop="1.0dip"
+        android:background="@color/list_bg_color"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip" >
+
+        <RadioGroup
+            android:id="@+id/backup_option_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/backup_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@drawable/check_button"
+                android:checked="true"
+                android:paddingLeft="28.0dip"
+                android:text="完全备份"
+                android:textColor="@color/offline_item_state_color" />
+
+            <RadioButton
+                android:id="@+id/backup_changed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.0dip"
+                android:layout_weight="1.0"
+                android:button="@drawable/check_button"
+                android:paddingLeft="28.0dip"
+                android:text="同步更新"
+                android:textColor="@color/offline_item_state_color"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/backup_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.0dip"
+                android:layout_weight="1.0"
+                android:button="@drawable/check_button"
+                android:paddingLeft="28.0dip"
+                android:text="自定义"
+                android:textColor="@color/offline_item_state_color" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/android_light_gray"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="备份信息"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/more_down" >
+
+        <EditText
+            android:id="@+id/app_show_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="备份标题"
+            android:imeOptions="actionNext"
+            android:paddingLeft="5.0dp"
+            android:textSize="15.0dip" />
+
+        <requestFocus />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/more_down" >
+
+        <EditText
+            android:id="@+id/app_show_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="备份内容"
+            android:imeOptions="actionNext"
+            android:paddingLeft="5.0dp"
+            android:textSize="15.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/more_down" >
+
+        <EditText
+            android:id="@+id/app_show_text"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:gravity="top"
+            android:hint="备份说明"
+            android:imeOptions="actionDone"
+            android:paddingLeft="5.0dp"
+            android:textSize="15.0dip" />
+    </RelativeLayout>
+
+</LinearLayout>

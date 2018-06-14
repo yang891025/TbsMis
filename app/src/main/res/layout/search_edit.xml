@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="检索名称:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_category_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="本机检索"
+            android:inputType="textPhonetic"
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_english_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="英文名称:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_english_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="search_basic"
+            android:inputType="textCapCharacters"
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="检索链接:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_search_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="/tbsapp/search.cbs?resname="
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="历史链接:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip"/>
+
+        <EditText
+            android:id="@+id/set_history_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="/tbsapp/history.cbs?resname="
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="关键词链接:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/set_keyword_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="/tbsapp/keyword.cbs?resname="
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="检索接口:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip"/>
+
+        <EditText
+            android:id="@+id/set_search_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="searchWord"
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:text="关键词接口:"
+            android:textColor="@color/black"
+            android:textSize="16.0dip"/>
+
+        <EditText
+            android:id="@+id/set_keyword_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="keyWord"
+            android:paddingLeft="3.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0dip"/>
+    </LinearLayout>
+
+</LinearLayout>

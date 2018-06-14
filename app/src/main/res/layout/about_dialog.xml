@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/title_bar_singlebtn"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include1">
+
+        <com.tbs.tbsmis.util.NonFocusingScrollView style="@style/setting_scrollview">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/picture_title"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20.0dip">
+
+                    <include
+                        layout="@layout/about_dialog_content"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/about_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="30.0dip">
+
+                    <include
+                        layout="@layout/setting_system"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/picture_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_launcher"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_toRightOf="@+id/picture">
+
+                        <include
+                            layout="@layout/about_app_dialog"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/about_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/about_more"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80.0dip"
+                    android:text="@string/app_copyright"
+                    android:textColor="@color/translucent_dark"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/copyright_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/about_title"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/copyright_title"
+                    android:textColor="@color/translucent_dark"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/copyright_title"
+                    android:layout_centerHorizontal="true"
+                    android:autoLink="all"
+                    android:text="@string/copyright_web"
+                    android:textColor="@color/translucent_dark"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </com.tbs.tbsmis.util.NonFocusingScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

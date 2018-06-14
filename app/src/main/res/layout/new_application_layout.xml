@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg">
+
+        <ImageView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2.0dp"
+            android:src="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="新建应用"
+            android:textColor="@color/white"
+            android:textSize="18.0dp"/>
+    </RelativeLayout>
+
+    <com.tbs.tbsmis.util.NonFocusingScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5.0dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_up">
+
+                    <EditText
+                        android:id="@+id/new_app_code"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/edit_code"
+                        android:imeOptions="actionNext"
+                        android:hint="tbs-mis">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/edit_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="应用代号："
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_dir_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle">
+
+                    <EditText
+                        android:id="@+id/new_app_dir"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:layout_toRightOf="@+id/edit_dir"
+                        android:hint="创建应用目录例如：TbsMis">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/edit_dir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="应用目录："
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_file_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle">
+
+                    <EditText
+                        android:id="@+id/new_app_ini"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/edit_file"
+                        android:imeOptions="actionNext"
+                        android:hint="TbsMis.ini">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/edit_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="配置文件："
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle">
+
+                    <EditText
+                        android:id="@+id/new_app_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/edit_name"
+                        android:imeOptions="actionNext"
+                        android:hint="移动信息服务">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/edit_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="应用名称："
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/more_middle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="应用地址："
+                        android:textSize="18.0dip"/>
+
+                    <EditText
+                        android:id="@+id/web_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:maxLines="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/more_middle" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="应用端口："
+                        android:textSize="18.0dip" />
+
+                    <EditText
+                        android:id="@+id/web_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:maxLines="1" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/edit_web_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down">
+
+                    <EditText
+                        android:id="@+id/new_app_path"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/edit_web"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:hint="/about.html">
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/edit_web"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="应用路径："
+                        android:textSize="18.0dip"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/account_tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25.0dip"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sapi_error"/>
+
+                    <TextView
+                        android:id="@+id/account_error_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sapi_error_text"
+                        android:textColor="@color/red"
+                        android:textSize="14.0sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/account_tip"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/more_all"
+                android:text=" 下一步 "
+                android:textColor="@color/shadowcolor"
+                android:textSize="18.0dip"/>
+
+        </LinearLayout>
+    </com.tbs.tbsmis.util.NonFocusingScrollView>
+</LinearLayout>

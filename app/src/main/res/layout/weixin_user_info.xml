@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/sapi_background_color" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <include layout="@layout/setting_titlebar_advance" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/weixin_user_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_title"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_all"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="头像"
+                        android:textColor="#ff424242"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:id="@+id/weixin_avatar_iv"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8.0dip"
+                        android:src="@drawable/default_avatar" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <TextView
+                        android:id="@+id/sapi_weixin_showname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/my_nickname"
+                        android:gravity="right"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textColor="#ff4b5460"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/my_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="昵称"
+                        android:textColor="#ff424242"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:id="@+id/remark_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <TextView
+                        android:id="@+id/sapi_weixin_remarkname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/my_remarkname"
+                        android:gravity="right"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textColor="#ff4b5460"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/my_remarkname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="备注"
+                        android:textColor="#ff424242"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_detail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weixin_user_detail"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_all"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <TextView
+                        android:id="@+id/sapi_weixin_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textColor="#ff4b5460"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="性别"
+                        android:textColor="#ff424242"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@+id/sapi_user_province"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/sapi_user_city"
+                            android:singleLine="true"
+                            android:text="北京"
+                            android:textColor="#ff4b5460"
+                            android:textSize="16.0sp" />
+
+                        <TextView
+                            android:id="@+id/sapi_user_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:singleLine="true"
+                            android:text="北京"
+                            android:textColor="#ff4b5460"
+                            android:textSize="16.0sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="地区"
+                        android:textColor="#ff424242"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffe5e5e5" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip" >
+
+                    <RelativeLayout
+                        android:id="@+id/group_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@+id/sapi_weixin_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:singleLine="true"
+                            android:text="未分组"
+                            android:textColor="#ff4b5460"
+                            android:textSize="16.0sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="所在分组"
+                        android:textColor="#ff424242"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_detail2"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/add_ims"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:background="@drawable/title_quit_bar" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="添加到通讯录"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/send_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:background="@drawable/title_quit_bar" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="微信客服回复"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

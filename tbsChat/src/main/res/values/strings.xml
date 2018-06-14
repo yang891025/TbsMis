@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TbsChat</string>
+    <string name="confirm_dialog_edittext_hint">说些什么</string>
+    <string name="confirm_dialog_back">返回商城客户端</string>
+    <string name="contact_search_hint">请输入搜索关键字</string>
+    <string name="confirm_dialog_qa">已提问</string>
+    <!-- TbsChat内容中复制 -->
+    <string name="main_title">信息</string>
+    <string name="main_contact">通讯录</string>
+    <string name="main_exit">退出</string>
+    <string name="main_more">我</string>
+    <string name="contact_search_tip">搜索</string>
+    <string name="chatting_send">发送</string>
+    <string name="chatfooter_presstorcd">按住 说话</string>
+    <string name="chatfooter_releasetofinish">松开 结束</string>
+    <string name="chatfooter_too_short">录音时间太短</string>
+    <string name="chatfooter_cancel_rcd">手指上滑，取消发送</string>
+    <string name="chatfooter_cancel_rcd_release">松开手指，取消发送</string>
+    <string name="search_chat_content_empty_result">未查找到结果</string>
+    <string name="net_warn_show_page">查看详情</string>
+    <string name="address_contact_selected">已选择</string>
+    <string name="chatting_comment">评论</string>
+    <string name="chatting_voice_forwardflag">转发了一条语音</string>
+    <string name="contact_search_title">搜号码</string>
+    <string name="find_friends_by_qq">添加QQ好友</string>
+    <string name="find_friends_by_mobile">添加手机联系人</string>
+    <string name="explore_all_verified_users">查找公众号</string>
+    <string name="contact_search_account_hint">TbsChat号/QQ号/手机号</string>
+    <string name="imgdownload_fail">下载图片失败</string>
+    <string name="imgdownload_hdimg_download_tip">正在加载原始图片，由于尺寸较大，可能需要较长时间</string>
+    <string name="cropimage_view_hd_img">查看原图</string>
+
+
+    <string name="app_ok">确定</string>
+    <string name="app_app">[应用消息]</string>
+    <string name="app_new">new</string>
+
+    <!-- 绑定邮箱  -->
+
+    <!-- 绑定银行卡 -->
+
+    <!-- 绑定手机 -->
+
+</resources>

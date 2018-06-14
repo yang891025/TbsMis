@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeixinUserActivity" >
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg" >
+
+        <ImageView
+            android:id="@+id/more_btn2"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/weixin_setup" />
+
+        <ImageView
+            android:id="@+id/search_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/wheel_val" />
+    </RelativeLayout>
+
+    <com.tbs.tbsmis.widget.PullToRefreshListView
+        android:id="@+id/frame_listview_users"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layoutButton"
+        android:layout_below="@+id/titlebar_layout"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <include
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            layout="@layout/loading_dialog2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/news_check"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/wheel_bg"
+            android:text="选择"
+            android:textColor="#ff373737"
+            android:textSize="18.0dip" />
+
+        <View
+            android:layout_width="2.0dip"
+            android:layout_height="fill_parent"
+            android:background="#ffdddddd" />
+
+        <Button
+            android:id="@+id/news_delete"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/wheel_bg"
+            android:text="删除"
+            android:textColor="#ff373737"
+            android:textSize="18.0dip" />
+
+        <View
+            android:layout_width="2.0dip"
+            android:layout_height="fill_parent"
+            android:background="#ffdddddd" />
+
+        <Button
+            android:id="@+id/news_cancle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/wheel_bg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="取消"
+            android:textColor="#ff373737"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+</RelativeLayout>

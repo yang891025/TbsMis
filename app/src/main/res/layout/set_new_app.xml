@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="8.0dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_code_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_code"
+            android:hint="tbs-mis" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="应用代号："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_dir_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_dir_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_dir"
+            android:hint="创建应用目录例如：TbsMis" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="应用目录："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_file_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_file_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_file"
+            android:hint="TbsMis.ini" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="配置文件："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_name_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_name"
+            android:hint="移动信息服务" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="应用名称："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_web_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_web_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edit_web"
+            android:hint="http://www.baidu.com/" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/edit_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="主页链接："
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/account_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sapi_error" />
+
+        <TextView
+            android:id="@+id/account_error_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sapi_error_text"
+            android:textColor="@color/red"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

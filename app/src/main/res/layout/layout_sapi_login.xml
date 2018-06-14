@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/sapi_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_sapi_title_bar" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:layout_marginTop="8.0dip" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/account_tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="25.0dip"
+                    android:gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sapi_error" />
+
+                    <TextView
+                        android:id="@+id/account_error_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sapi_error_text"
+                        android:textColor="@color/red"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="44.0dip"
+                        android:background="@drawable/more_up"
+                        android:gravity="left|center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dip"
+                            android:text="@string/sapi_account_tip"
+                            android:textColor="@color/shadowcolor"
+                            android:textSize="16.0sp" />
+
+                        <EditText
+                            android:id="@+id/account"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="15.0dip"
+                            android:layout_marginRight="8.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/sapi_account_hint"
+                            android:lines="1"
+                            android:textColor="@color/shadowcolor"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textSize="14.0sp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15.0dip"
+                            android:background="@drawable/sapi_login_left_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="44.0dip"
+                        android:background="@drawable/more_down"
+                        android:gravity="left|center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dip"
+                            android:text="@string/sapi_password_tip"
+                            android:textColor="@color/shadowcolor"
+                            android:textSize="16.0sp" />
+
+                        <EditText
+                            android:id="@+id/account_password"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="15.0dip"
+                            android:layout_marginRight="8.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/sapi_password_tip"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:maxLength="14"
+                            android:maxLines="1"
+                            android:textColor="@color/shadowcolor"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textSize="14.0sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginTop="15.0dip" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <CheckBox
+                            android:id="@+id/account_remember_checkBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/account_remember_checkBox"
+                            android:layout_alignBottom="@+id/account_remember_checkBox"
+                            android:layout_toRightOf="@+id/account_remember_checkBox"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:text="@string/sapi_remember_password"
+                            android:textColor="@color/shadowcolor"
+                            android:textSize="16.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/auto_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" >
+
+                        <CheckBox
+                            android:id="@+id/account_auto_checkBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/basic_checkbox_selector" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/account_auto_checkBox"
+                            android:layout_alignBottom="@+id/account_auto_checkBox"
+                            android:layout_toRightOf="@+id/account_auto_checkBox"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:text="@string/sapi_auto_login"
+                            android:textColor="@color/shadowcolor"
+                            android:textSize="16.0sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/sapi_btn_selector"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/account_login_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:text="@string/sapi_login"
+                        android:textColor="@color/shadowcolor"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/account_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_toLeftOf="@+id/account_login_text"
+                        android:background="@drawable/loading_dialog_center" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dip" >
+
+                    <Button
+                        android:id="@+id/account_forget_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="15.0dip"
+                        android:background="@null"
+                        android:text="@string/sapi_forget_password"
+                        android:textColor="@color/title_bar_backgroud_color"
+                        android:textSize="14.0sp" />
+
+                    <Button
+                        android:id="@+id/account_dynamic_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="15.0dip"
+                        android:background="@null"
+                        android:text="@string/sapi_dynamic_login"
+                        android:textColor="@color/title_bar_backgroud_color"
+                        android:textSize="14.0sp" />
+
+                    <Button
+                        android:id="@+id/account_activate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@null"
+                        android:text="@string/sapi_account_activate"
+                        android:textColor="@color/title_bar_backgroud_color"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorButtonNormal"
+                android:orientation="vertical"
+                tools:context=".activity.ImgDynamicActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_top_bar"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="这一刻的想法..."
+            android:paddingLeft="5dp">
+        </EditText>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_style_green"
+            android:id="@+id/AudioView">
+
+
+            <ImageView
+                android:id="@+id/iv_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/chatfrom_voice_playing_f3"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="13dp"/>
+
+            <TextView
+                android:id="@+id/tv_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_voice"
+                android:gravity="center"
+                android:text="3&apos;&apos;"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AudioView"
+            android:layout_margin="10.0dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_mylocation"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5.0dp"
+                android:gravity="center"
+                android:text="所在位置"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<resources>
+    <style name="CustomDatePickerDialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/dialog_fragment_animation</item>
+        <item name="android:windowEnterAnimation">@anim/dialog_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_bottom</item>
+    </style>
+    <style name="dialog_fragment_animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_bottom</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="playBarBackground">@drawable/play_bar_bg_selector</item>
+    </style>
+
+    <style name="AppBaseThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/grey_900</item>
+        <item name="colorPrimaryDark">@color/grey_900</item>
+        <item name="colorAccent">@color/grey_900</item>
+        <item name="playBarBackground">@drawable/play_bar_bg_selector_dark</item>
+    </style>
+
+    <attr name="playBarBackground" format="reference" />
+
+    <style name="MusicTheme" parent="AppBaseTheme" />
+
+    <style name="AppThemeDark" parent="AppBaseThemeDark" />
+
+    <style name="AppTheme.Search" parent="AppBaseTheme">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppThemeDark.Search" parent="AppBaseThemeDark">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Text" parent="TextAppearance.AppCompat" />
+</resources>

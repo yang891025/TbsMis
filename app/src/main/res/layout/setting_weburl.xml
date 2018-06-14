@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/review_bg_top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dp"
+        android:paddingRight="5.0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址 ："
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/Address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_page_search_box"
+            android:hint="168.160.111.251"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5.0dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dp"
+        android:paddingRight="5.0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="端口 ："
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_page_search_box"
+            android:hint="1011"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingLeft="5.0dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/light_gray"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dp"
+        android:paddingRight="5.0dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="用户名："
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/Username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.3dp"
+            android:background="@drawable/search_page_search_box"
+            android:gravity="center_vertical"
+            android:hint="UserName"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingLeft="5.0dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dp"
+        android:paddingRight="5.0dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码 ："
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/PWD"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_page_search_box"
+            android:hint="Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingLeft="5.0dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/light_gray"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10.0dp"
+        android:paddingRight="5.0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="路径 ："
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/PATH"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_page_search_box"
+            android:hint="/path"
+            android:imeOptions="actionDone"
+            android:paddingLeft="5.0dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</LinearLayout>

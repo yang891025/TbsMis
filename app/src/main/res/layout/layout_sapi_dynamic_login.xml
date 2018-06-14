@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/sapi_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_sapi_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/sapi_dynamic_login_ll_error_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="left|center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sapi_error" />
+
+        <TextView
+            android:id="@+id/sapi_dynamic_login_tv_error_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sapi_error_text"
+            android:textColor="@color/red"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="44.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/more_middle"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:text="@string/sapi_phone_tip"
+                android:textColor="@color/shadowcolor"
+                android:textSize="16.0sp" />
+
+            <EditText
+                android:id="@+id/sapi_dynamic_login_et_phone"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/sapi_phone_hint"
+                android:inputType="phone"
+                android:textColor="@color/shadowcolor"
+                android:textColorHint="@color/text_hint_color"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sapi_dynamic_login_btn_sendsms"
+            android:layout_width="wrap_content"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/sapi_btn_selector"
+            android:text="@string/send_label"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/more_middle"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:text="@string/sapi_verifycode_tip"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/sapi_dynamic_login_et_smscode"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/sapi_verifycode_hint"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/shadowcolor"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sapi_dynamic_login_rl_login"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/sapi_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/sapi_dynamic_login_tv_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/sapi_login"
+            android:textColor="@color/shadowcolor"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/sapi_dynamic_login_iv_login_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/sapi_dynamic_login_tv_login_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-23.0dip"
+            android:background="@drawable/loading_dialog_center" />
+    </RelativeLayout>
+
+</LinearLayout>

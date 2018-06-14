@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- download_manager -->
+    <string name="download_downloading">downloading</string>
+    <string name="download_downloaded">Downloaded</string>
+    <string name="download_downloadsource">Downloadsource</string>
+    <string name="download_initial">Initial</string>
+    <string name="download_stopped">Stopped</string>
+    <string name="download_wait">Waiting</string>
+    <string name="download_paused">Paused</string>
+    <string name="download_failed">Failed</string>
+    <string name="download_finished">Finished</string>
+    <string name="downloading_msg">Downloading…</string>
+    <string name="download_delete_task">Delete download task</string>
+    <string name="download_delete_task_file">Delete download task and file</string>
+    <string name="download_deleted_task_ok">Download task  deleted</string>
+    <string name="download_deleted_task_file_ok">Download task and file  deleted</string>
+    <string name="download_speed">Download %1$s percent, speed %2$s KB/S</string>
+    <string name="download_file_not_exist">File not exist</string>
+</resources>

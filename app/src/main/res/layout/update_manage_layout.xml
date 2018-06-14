@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/sapi_background_color"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg">
+
+        <ImageView
+            android:id="@+id/more_btn2"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="版本管理"/>
+
+        <ImageView
+            android:id="@+id/search_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/menu_btn"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/update_title_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:background="@drawable/more_middle"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/update_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="新版本文件"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:id="@+id/update_local_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/update_title_text"
+                    android:textColor="@color/shadowcolor"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="14.0sp"/>
+                <ImageView
+                    style="@style/tool_imageview_basic"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/xsj"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:background="@drawable/more_middle"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="应用名称"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="16.0sp"/>
+
+                <EditText
+                    android:id="@+id/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toLeftOf="@+id/author_delete"
+                    android:layout_toRightOf="@+id/text_author"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/shadowcolor"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="14.0sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/news_address_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:background="@drawable/more_middle"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/text_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="当前版本"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:id="@+id/app_ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_toRightOf="@+id/text_address"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="14.0sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/more_middle"
+                android:gravity="left|center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="更新信息"
+                        android:textColor="@color/shadowcolor"
+                        android:textSize="16.0sp"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/update_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="100.0dip"
+                    android:layout_marginBottom="15.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:background="@color/list_bg_color"
+                    android:gravity="top"
+                    android:textColor="@color/shadowcolor"
+                    android:textColorHint="@color/text_hint_color"
+                    android:textSize="14.0sp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/start_backup"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="25.0dip"
+                android:background="@drawable/sapi_btn_selector"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/account_login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:text="开始上传"
+                    android:textColor="@color/shadowcolor"
+                    android:textSize="16.0sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

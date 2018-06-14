@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.0dip">
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="120.0dip"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/type_layout"
+                android:layout_margin="1.0dip"/>
+
+            <FrameLayout
+                android:id="@+id/type_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="25.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="8.0dip">
+
+                <LinearLayout
+                    android:layout_width="25.0dip"
+                    android:layout_height="25.0dip"
+                    android:background="@drawable/black_round_bg"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="24.0dip"
+                        android:layout_height="17.0dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_article"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="25.0dip"
+                    android:background="@drawable/black_round_bg"
+                    android:gravity="center"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip">
+
+                    <ImageView
+                        android:id="@+id/type_iv"
+                        android:layout_width="17.0dip"
+                        android:layout_height="17.0dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_video"/>
+
+                    <TextView
+                        android:id="@+id/type_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4.0dip"
+                        android:singleLine="true"
+                        android:text="2'10"
+                        android:textColor="@color/white"
+                        android:textSize="12.0sp"/>
+                </LinearLayout>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="2.0dip">
+
+                <TextView
+                    android:id="@id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="传递希望与和平的涂鸦艺术"
+                    android:textColor="#ff333333"
+                    android:textSize="15.0sp"/>
+
+                <TextView
+                    android:id="@+id/intro_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="6.0dip"
+                    android:maxLines="2"
+                    android:text="传递希望与和平的涂鸦艺术传递希望与和平的涂鸦艺术传递希望与和平的涂鸦艺术传递希望与和平的涂鸦艺术传递希望与和平的涂鸦艺术传递希望与和平的涂鸦艺术"
+                    android:textColor="#ff333333"
+                    android:textSize="12.0sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="5.0dip"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tag_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12.0dip"
+                        android:paddingBottom="2.0dip"
+                        android:paddingLeft="6.0dip"
+                        android:paddingRight="6.0dip"
+                        android:paddingTop="2.0dip"
+                        android:text="TED"
+                        android:textColor="@color/title_bar_backgroud_color"
+                        android:textSize="12.0sp"/>
+
+                    <TextView
+                        android:id="@+id/time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2015/11/12"
+                        android:textColor="@color/gray"
+                        android:textSize="12.0sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2.0dip"
+                android:layout_marginTop="2.0dip"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:id="@+id/count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32.0dip"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="%1$s人观看"
+                    android:textColor="@color/gray"
+                    android:textSize="12.0sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/delete_iv"
+                        android:layout_width="32.0dip"
+                        android:layout_height="32.0dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/button_delete"/>
+
+                    <View
+                        android:layout_width="1.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:background="#ffdcdcdc"/>
+
+                    <ImageView
+                        android:id="@+id/share_iv"
+                        android:layout_width="32.0dip"
+                        android:layout_height="32.0dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_content_share"/>
+
+                    <View
+                        android:layout_width="1.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:background="#ffdcdcdc"
+                        android:visibility="gone"/>
+
+                    <FrameLayout
+                        android:layout_width="32.0dip"
+                        android:layout_height="32.0dip"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/collect_iv"
+                            android:layout_width="32.0dip"
+                            android:layout_height="32.0dip"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/collect_true"/>
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white"
+                            android:visibility="gone"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/stop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/stop"
+            android:layout_toStartOf="@+id/stop"
+            android:src="@drawable/sapi_error"/>
+
+        <TextView
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="已停用"
+            android:textColor="@color/gray"
+            android:textSize="12.0sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controll_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/update_txt"
+            android:src="@drawable/icon_about_iv"/>
+
+        <TextView
+            android:id="@+id/update_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="有新的版本, 点击更新"
+            android:textColor="@color/gray"
+            android:textStyle="normal|bold"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#19000000"/>
+</LinearLayout>

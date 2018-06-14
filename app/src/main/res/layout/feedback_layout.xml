@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/feedback_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip"
+        android:paddingTop="14.0dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feedback_bg"
+            android:orientation="vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dip"
+                android:text="意见反馈"
+                android:textColor="@color/black"
+                android:textSize="18.0dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:text="请描述您的建议、意见、问题等："
+                android:textColor="@color/black"
+                android:textSize="13.0dip" />
+
+            <EditText
+                android:id="@+id/feedback_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:autoLink="web|email"
+                android:gravity="top"
+                android:hint="输入您的建议、意见和问题"
+                android:lines="4"
+                android:textSize="13.0dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:text="您的联系方式（邮箱/手机号）："
+                android:textColor="@color/black"
+                android:textSize="13.0dip" />
+
+            <EditText
+                android:id="@+id/feedback_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:hint="输入您的联系方式"
+                android:textSize="10.0dip" />
+
+            <Button
+                android:id="@+id/feedback_publish"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginBottom="30dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/publish_btn_selector"
+                android:text="提交反馈"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/feedback_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/feedback_scrollview"
+        android:layout_alignTop="@+id/feedback_scrollview"
+        android:background="@drawable/feedback_close_btn" />
+
+</RelativeLayout>

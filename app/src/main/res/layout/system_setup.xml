@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/setting_titlebar_advance"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/include_top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dp"
+            android:paddingLeft="5.0dp"
+            android:paddingRight="5.0dp"
+            android:paddingTop="10.0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/more_up"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="配置"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp"/>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/more_up"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/project_name_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44.0dip"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="应用名称:"
+                                android:textColor="#ff555858"
+                                android:textSize="18.0dip"/>
+
+                            <TextView
+                                android:id="@+id/project_name_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="8.0dip"
+                                android:layout_toRightOf="@+id/project_name_title"
+                                android:hint="@string/app_name"
+                                android:paddingLeft="5.0dp">
+                            </TextView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="44.0dip"
+                            android:background="@drawable/more_middle"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/project_en_name_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="英文名称:"
+                                android:textColor="#ff555858"
+                                android:textSize="18.0dip"/>
+
+                            <EditText
+                                android:id="@+id/project_en_name_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="8.0dip"
+                                android:layout_toRightOf="@+id/project_en_name_title"
+                                android:background="@drawable/search_page_search_box"
+                                android:hint="@string/about_title"
+                                android:imeOptions="actionNext"
+                                android:paddingLeft="5.0dp"
+                                android:singleLine="true">
+                            </EditText>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="44.0dip"
+                            android:background="@drawable/more_middle"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/company_name_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="授权用户:"
+                                android:textColor="#ff555858"
+                                android:textSize="18.0dip"/>
+
+                            <EditText
+                                android:id="@+id/company_name_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="8.0dip"
+                                android:layout_toRightOf="@+id/company_name_title"
+                                android:background="@drawable/search_page_search_box"
+                                android:hint="@string/copyright_content"
+                                android:imeOptions="actionNext"
+                                android:paddingLeft="5.0dp"
+                                android:singleLine="true">
+                            </EditText>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="44.0dip"
+                            android:background="@drawable/more_down"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/company_address_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="用户网址:"
+                                android:textColor="#ff555858"
+                                android:textSize="18.0dip"/>
+
+                            <EditText
+                                android:id="@+id/company_address_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="8.0dip"
+                                android:layout_toRightOf="@+id/company_address_title"
+                                android:background="@drawable/search_page_search_box"
+                                android:hint="@string/technique_provide_content"
+                                android:imeOptions="actionDone"
+                                android:paddingLeft="5.0dp"
+                                android:singleLine="true">
+                            </EditText>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

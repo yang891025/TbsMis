@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5.0dip"
+        android:progressDrawable="@drawable/progress_style"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg" >
+
+        <ImageView
+            android:id="@+id/more_btn2"
+            style="@style/title_more_btn"
+            android:layout_marginLeft="0.0dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/title_textview_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/search_btn2"
+            android:layout_toRightOf="@+id/more_btn2"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="细览" />
+
+        <ImageView
+            android:id="@+id/search_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/more_btn2"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/more_btn2"
+            android:background="@drawable/menu_btn" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_layout"
+        android:background="@color/bg_gray"
+        android:scrollbars="vertical" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <include
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            layout="@layout/loading_dialog2" />
+    </RelativeLayout>
+
+</RelativeLayout>

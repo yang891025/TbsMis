@@ -1,0 +1,22 @@
+<resources>
+
+    <style name="MMTheme.Basic" parent="@android:style/Theme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkboxStyle">@style/MMCheckBox</item>
+        <item name="android:listViewStyle">@style/MMListView</item>
+        <item name="android:preferenceScreenStyle">@style/MMPreferenceScreen</item>
+        <item name="android:preferenceCategoryStyle">@style/MMPreference.Catagory</item>
+        <item name="android:preferenceInformationStyle">@style/MMPreference.Information</item>
+        <item name="android:preferenceStyle">@style/MMPreference</item>
+        <item name="android:checkBoxPreferenceStyle">@style/MMPreference.CheckBoxPreference</item>
+        <item name="android:yesNoPreferenceStyle">@style/MMPreference.DialogPreference.YesNoPreference</item>
+        <item name="android:dialogPreferenceStyle">@style/MMPreference.DialogPreference</item>
+        <item name="android:editTextPreferenceStyle">@style/MMPreference.DialogPreference.EditTextPreference</item>
+        <item name="android:ringtonePreferenceStyle">@style/MMPreference.RingtonePreference</item>
+        <item name="android:preferenceLayoutChild">@style/MMPreference.Child</item>
+        <item name="android:windowAnimationStyle">@style/MMAnimation.Activity</item>
+    </style>
+
+</resources>

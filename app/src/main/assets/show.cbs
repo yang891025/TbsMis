@@ -1,0 +1,17 @@
+[%
+	inifile="./tbsnews.ini";   //当前应用的配置文件
+ 
+	TitleFontSize = getinistring(inifile,"WebView","TitleFontSize","16");
+	TextFontSize = getinistring(inifile,"WebView","TextFontSize","14");
+
+	TextColor = getinistring(inifile,"WebView","TextColor","#aeadad");
+	TextFont = getinistring(inifile,"WebView","TextFont","微软雅黑");
+%]
+<html>
+<head>
+</head>
+<body>
+	<p style="font-size:[%=titlefontsize%]px;color:[%=TextColor%];font-family:[%=TextFont%]">拖动滑杆改变页面大小（部分页面可能会有显示问题）</p>
+	<p style="font-size:[%=textfontsize%]px;">拖动滑杆改变页面大小（部分页面可能会有显示问题）</p>
+</body>
+<html>

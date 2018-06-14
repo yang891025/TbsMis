@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/setting_titlebar_advance" />
+
+    <com.tbs.tbsmis.util.NonFocusingScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10.0dp"
+        android:paddingLeft="5.0dp"
+        android:paddingRight="5.0dp"
+        android:paddingTop="10.0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="网址："
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/netName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/WEBSetting"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/offline_item_label_color"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15.0dp"
+                android:paddingRight="15.0dp"
+                android:paddingTop="15.0dp" >
+
+                <Button
+                    android:id="@+id/webCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:layout_weight="1.0"
+                    android:text="@string/onKeyUseAll"
+                    android:textColor="@color/offline_start_color"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/web_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtweb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/WEBSetting"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/web_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtweb"
+                        android:layout_alignBottom="@+id/txtweb"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/web_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/web_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/web_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/module_push_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/module_push_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="信息推送"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/module_push_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/module_push_txt"
+                        android:layout_alignBottom="@+id/module_push_txt"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/module_push_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/accept_net_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/more_up"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/accept_net_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="推送服务"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/accept_net_title"
+                        android:text="@string/push_message"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/accept_net_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/accept_net_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_middle"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up" >
+
+                        <EditText
+                            android:id="@+id/module_push_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/module_push_address_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/module_push_address_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/adress"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/module_push_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/module_push_port_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/module_push_port_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/port"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down" >
+
+                        <EditText
+                            android:id="@+id/module_push_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/module_push_path_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/module_push_path_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/path"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/send_net_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/send_net_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="WEB服务"
+                        android:textColor="#ff555858"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/send_net_title"
+                        android:text="@string/push_message"
+                        android:textColor="#ffa7a7a7"
+                        android:textSize="13.0dip" />
+
+                    <CheckBox
+                        android:id="@+id/send_net_box"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/arrow_up_down"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/send_net_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_down"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:background="@drawable/more_up" >
+
+                        <EditText
+                            android:id="@+id/module_send_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/address_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_adress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/address_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/adress"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_middle" >
+
+                        <EditText
+                            android:id="@+id/module_send_port"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/port_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:hint="@string/hint_port"
+                            android:imeOptions="actionNext"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/port_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/port"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:background="@drawable/more_down" >
+
+                        <EditText
+                            android:id="@+id/module_send_path"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5.0dip"
+                            android:layout_toRightOf="@+id/path_title"
+                            android:background="@drawable/search_page_search_box"
+                            android:imeOptions="actionDone"
+                            android:inputType="textUri"
+                            android:paddingLeft="5.0dp"
+                            android:singleLine="true" >
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/path_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/path"
+                            android:textColor="#ff555858"
+                            android:textSize="18.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtnetwork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="离线下载"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/network_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtnetwork"
+                        android:layout_alignBottom="@+id/txtnetwork"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/NetWork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <include layout="@layout/setting_weburl" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/store_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtstore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/CloudSetting"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/store_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtstore"
+                        android:layout_alignBottom="@+id/txtstore"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/store_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/store_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/store_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="路径："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/store_path"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="/path"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/skydrive_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtskydrive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/SkyDriverSetting"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/skydrive_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtskydrive"
+                        android:layout_alignBottom="@+id/txtskydrive"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/skydrive_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/skydrive_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/skydrive_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="路径："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/skydrive_path"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="/path"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="资源商城"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/email_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtemail"
+                        android:layout_alignBottom="@+id/txtemail"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="SMTP："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/smtp_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="Smtp.example.com"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/smtp_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="IMAP："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/imap_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="Imap.example.com"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/imap_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="POP："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/pop_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="Pop.example.com"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/pop_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebs_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtebs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/EBSSetting"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/ebs_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtebs"
+                        android:layout_alignBottom="@+id/txtebs"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ebs_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ebs_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ebs_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="路径："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ebs_path"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="/path"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tbs_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txttbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/TBSSetting"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/tbs_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txttbs"
+                        android:layout_alignBottom="@+id/txttbs"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tbs_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/tbs_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/tbs_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fts_set"
+                android:layout_width="match_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="14.0dip"
+                android:background="@color/offline_line_color" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1.0dip"
+                    android:background="@color/list_bg_color"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/txtfts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/FTSSetting"
+                        android:textColor="@color/offline_item_label_color"
+                        android:textSize="16.0sp" />
+
+                    <CheckBox
+                        android:id="@+id/fts_checkbox"
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:layout_alignBaseline="@+id/txtfts"
+                        android:layout_alignBottom="@+id/txtfts"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/checkbox_style_shadow"
+                        android:clickable="false" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fts_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/review_bg_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adress"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/fts_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_adress"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/server_port"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/fts_port"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="@string/hint_port"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10.0dp"
+                    android:paddingRight="5.0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="路径："
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/fts_path"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_page_search_box"
+                        android:hint="/path"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingLeft="5.0dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tbs.tbsmis.util.NonFocusingScrollView>
+
+</LinearLayout>

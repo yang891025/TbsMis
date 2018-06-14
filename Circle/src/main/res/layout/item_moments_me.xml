@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              android:padding="5dp">
+
+    <View
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/re_time"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="bottom"
+                android:text="@string/day"
+                android:textColor="#353535"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_day"
+                android:gravity="bottom"
+                android:paddingBottom="2dp"
+                android:text="@string/Moth"
+                android:textColor="#353535"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_day"
+                android:paddingTop="5dp"
+                android:text="@string/location_message"
+                android:textColor="#576B95"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <!-- 不同的地方 -->
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/re_time"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="24dip"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
